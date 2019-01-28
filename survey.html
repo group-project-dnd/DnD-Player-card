@@ -51,20 +51,48 @@
 
   </aside>
   <aside id=subraces>
-    <section id="dwarf">
-      <p>Dwarf: A long lived, short and stout race of people known for skill with stone and metal.
+    <section id="dwarf" class="sub">
+      <p>Dwarf: A long lived, short and stout race of people known for skill with stone and metal.<br>
         Attributes: Constitution +2, 25 speed, dark vision, advantage on saving throws against poison, resistance to poison damage. Proficiency with battleaxe, handaxe, throwing hammer. Proficiency with one of three artisan’s tools: smith’s tools, brewer’s supplies, or mason’s tools. Add proficiency *2 on Intelligence (History) check related to the stonework. Can speak, read, and write Common and Dwarvish.</p>
-        <input type="radio" name="subrace" value="hill"> Subraces: Hill dwarves :Wisdom +1, max hp +1 for every level.
-        Mountain Dwarves: Str +2, Proficiency with light and medium armor.<br>
+        <input type="radio" name="subrace" value="hill"> Hill dwarves: Wisdom +1, max hp +1 for every level.<br>
+        <input type="radio" name="subrace" value="mountain">Mountain Dwarves: Str +2, Proficiency with light and medium armor.<br>
     </section>
-    <section id="elf">
+    <section id="elf" class="sub">
+      <p>Elf: A long lived race of slender and graceful people known for their affinity with nature.<br>
+        Attributes: Dexterity+2, 30 speed, dark vision, Proficiency: perception. Proficiency with short bow, shortsword, longsword, longbow. Adv on saving throws vs charmed. Magic can’t put you to sleep, Trance instead of sleep. Can speak, read, and write Common and Elvish.
+      </p>
+      <input type="radio" name="subrace" value="high">High-Elf: Intelligence +1, extra wizard cantrip, extra language. Proficiency with short bow, shortsword, longsword, longbow.
+      <input type="radio" name="subrace" value="wood">Wood elf: Wisdom +1,  walking speed 35 feet, Can hide when lightly obscured by nature. Proficiency with short bow, shortsword, longsword, longbow.
+      <input type="radio" name="subrace" value="drow">Drow: Charisma +1, Darkvision 120 ft. When in direct sunlight, Disadvantage on perception. Proficiency with rapiers, shortswords and hand crossbows. Know Dancing lights cantrip.
+    </section>
+    <section id="halfing" class="sub">
       <p></p>
+      <input type="radio" name="subrace" value="lightfoot">
+      <input type="radio" name="subrace" value="stout">
     </section>
+    <section id="Human" class="sub">
+        <p></p>
+    </section>
+    <section id="dragonborn" class="sub">
+      <p></p>
+      <input type="radio" name="subrace" value="lightfoot">
+      <input type="radio" name="subrace" value="stout">
+    </section>
+    <section id="gnome" class="sub">
+      <p></p>
+      <input type="radio" name="subrace" value="lightfoot">
+      <input type="radio" name="subrace" value="stout">
+    </section>
+    <section id="half-elf" class="sub">
+   <p></p>
+    
+    </section> 
   </aside>
+
 </content>
 <button type="button">
   Generate Charactersheet
 </button>
-<link rel="stylesheet" href="app.js/js">
+<script src="app.js"></script>
 </body>
 
