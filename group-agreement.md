@@ -1,5 +1,3 @@
-# USER STORIES
-
 # GROUP AGREEMENT
 Communication plan: 
 <!IMPORTANT>Try to not talk over eachother as much as possible.
