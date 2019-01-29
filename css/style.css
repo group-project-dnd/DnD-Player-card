@@ -9,12 +9,23 @@ body {
   display: inline-block;
   border: 2px solid black;
   text-align: left;
-  width: 80px;
+  width: 13vw;
+  height:400px;
+  margin-right: 4vw;
 }
 
 .role{
   display: inline-block;
   border: 2px solid black;
   /* position: relative; */
-  width: 80px;
+  width: 13vw;
+  height: 400px;
+}
+body{
+  padding-left: 5vw;
+}
+content{
+  width: 90vw;
+  border: solid;
+  display:block;
 }
