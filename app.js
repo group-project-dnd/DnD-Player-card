@@ -270,7 +270,7 @@ new Character('Leo', 'Dragonborn', 'White', 'Rogue');
 new Character('Elizabeth', 'Elf', 'Dark Elf (Drow)', 'Cleric');
 assignBackgroundHealth();
 assignAblScores();
-calcablMods();
+calcAblMods();
 console.log(allChars);
 
 //hides subraces on page load
