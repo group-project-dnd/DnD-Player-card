@@ -6,7 +6,7 @@ var races = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Gnome', 'Half-E
 var jobs = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorceror', 'Warlock', 'Wizard'];
 var backgrounds = ['Acolyte', 'Charlatan', 'Criminal', 'Entertainer', 'Folk Hero', 'Guild Artisan', 'Hermit', 'Noble', 'Outlander', 'Sage', 'Sailor', 'Soldier'];
 var subraces = ['Hill Dwarf', 'Mountain Dwarf', 'High Elf', 'Wood Elf', 'Dark Elf (Drow)', 'Lightfoot', 'Stout', 'Forest Gnome', 'Rock Gnome'];
-var proficiencies = ['STR Saving Throws', 'Athletics', 'DEX Saving Throws', 'Acrobatics', 'Sleight of Hand', 'Stealth', 'Arcana', 'History', 'Investigation', 'Nature', 'Religion', 'Animal Handling', 'Insight', 'Medicine', 'Perception', 'Survival', 'Deception', 'Intimidation', 'Performance', 'Persuasion'];
+var proficiencies = ['STR Saving Throws', 'Athletics', 'DEX Saving Throws', 'Acrobatics', 'Sleight of Hand', 'Stealth', 'CON Saving Throws', 'INT Saving Throws', 'Arcana', 'History', 'Investigation', 'Nature', 'Religion', 'WIS Saving Throws', 'Animal Handling', 'Insight', 'Medicine', 'Perception', 'Survival', 'CHA Saving Throws', 'Deception', 'Intimidation', 'Performance', 'Persuasion'];
 
 var allChars = [];
 
@@ -14,89 +14,119 @@ var allChars = [];
 
 function Character(name, race, subrace, job) {
   this.name = name;
+  this.job = job;
+  this.level = 1;
+  this.background = '';
   this.race = race;
   this.subrace = subrace;
-  this.job = job;
-  this.background = '';
-  this.hp = 0;
-  this.hitdie = '';
+  this.alignment = 'Neutral'; //STRETCH GOAL: make this customizable
+  this.exp = 0;
   this.proBonus = 2;
   this.inspiration = 0;
   this.ablScores = [];
-  this.modifiers = [0, 0, 0, 0, 0, 0];
+  this.ablMods = [0, 0, 0, 0, 0, 0];
   this.ablPros = [];
+  this.proMods = [];
+  this.perception = 10; //plus perception modifier
+  this.armClass = (10 + this.ablMods[1]);
+  this.initiative = this.ablMods[1];
+  this.hp = 0;
+  this.hitdie = '';
   allChars.push(this);
 }
 
-//Assigns background, hit dice, and hp
+//Assigns background, hit dice, hp, and skill proficiencies
 function assignBackgroundHealth() {
   for (var i = 0; i < allChars.length; i++) {
     switch (allChars[i].job) {
       case jobs[0]:
+        allChars[i].ablPros.push(proficiencies[0], proficiencies[6], proficiencies[14], proficiencies[11]);
         allChars[i].background = backgrounds[8];
-        // allChars[i].ablPros.push()
+        allChars[i].ablPros.push(proficiencies[1], proficiencies[18]);
         allChars[i].hitdie = 'd12';
         allChars[i].hp = 12;
         break;
       case jobs[1]:
+        allChars[i].ablPros.push(proficiencies[2], proficiencies[19], proficiencies[23], proficiencies[9], proficiencies[20]);
         allChars[i].background = backgrounds[3];
+        allChars[i].ablPros.push(proficiencies[3], proficiencies[22]);
         allChars[i].hitdie = 'd8';
         allChars[i].hp = 8;
         break;
       case jobs[2]:
+        allChars[i].ablPros.push(proficiencies[13], proficiencies[19], proficiencies[16], proficiencies[23]);
         allChars[i].background = backgrounds[0];
+        allChars[i].ablPros.push(proficiencies[15], proficiencies[12]);
         allChars[i].hitdie = 'd8';
         allChars[i].hp = 8;
         break;
       case jobs[3]:
+        allChars[i].ablPros.push(proficiencies[7], proficiencies[13], proficiencies[14], proficiencies[11]);
         allChars[i].background = backgrounds[6];
+        allChars[i].ablPros.push(proficiencies[16], proficiencies[12]);
         allChars[i].hitdie = 'd8';
         allChars[i].hp = 8;
         break;
       case jobs[4]:
+        allChars[i].ablPros.push(proficiencies[0], proficiencies[6], proficiencies[15], proficiencies[18]);
         allChars[i].background = backgrounds[11];
+        allChars[i].ablPros.push(proficiencies[1], proficiencies[21]);
         allChars[i].hitdie = 'd10';
         allChars[i].hp = 10;
         break;
       case jobs[5]:
+        allChars[i].ablPros.push(proficiencies[0], proficiencies[2], proficiencies[3], proficiencies[5]);
         allChars[i].background = backgrounds[0];
+        allChars[i].ablPros.push(proficiencies[15], proficiencies[12]);
         allChars[i].hitdie = 'd8';
         allChars[i].hp = 8;
         break;
       case jobs[6]:
+        allChars[i].ablPros.push(proficiencies[13], proficiencies[19], proficiencies[1], proficiencies[12]);
         allChars[i].background = backgrounds[4];
+        allChars[i].ablPros.push(proficiencies[14], proficiencies[18]);
         allChars[i].hitdie = 'd10';
         allChars[i].hp = 10;
         break;
       case jobs[7]:
+        allChars[i].ablPros.push(proficiencies[0], proficiencies[6], proficiencies[14], proficiencies[11], proficiencies[5]);
         allChars[i].background = backgrounds[8];
+        allChars[i].ablPros.push(proficiencies[1], proficiencies[18]);
         allChars[i].hitdie = 'd10';
         allChars[i].hp = 10;
         break;
       case jobs[8]:
+        allChars[i].ablPros.push(proficiencies[2], proficiencies[7], proficiencies[4], proficiencies[3], proficiencies[23], proficiencies[22]);
         allChars[i].background = backgrounds[2];
+        allChars[i].ablPros.push(proficiencies[20], proficiencies[5]);
         allChars[i].hitdie = 'd8';
         allChars[i].hp = 8;
         break;
       case jobs[9]:
+        allChars[i].ablPros.push(proficiencies[19], proficiencies[6], proficiencies[15], proficiencies[12]);
         allChars[i].background = backgrounds[9];
+        allChars[i].ablPros.push(proficiencies[8], proficiencies[9]);
         allChars[i].hitdie = 'd6';
         allChars[i].hp = 6;
         break;
       case jobs[10]:
+        allChars[i].ablPros.push(proficiencies[13], proficiencies[19], proficiencies[21], proficiencies[8]);
         allChars[i].background = backgrounds[1];
+        allChars[i].ablPros.push(proficiencies[20], proficiencies[4]);
         allChars[i].hitdie = 'd8';
         allChars[i].hp = 8;
         break;
       case jobs[11]:
+        allChars[i].ablPros.push(proficiencies[7], proficiencies[13], proficiencies[9], proficiencies[8]);
         allChars[i].background = backgrounds[5];
+        allChars[i].ablPros.push(proficiencies[15], proficiencies[23]);
         allChars[i].hitdie = 'd6';
         allChars[i].hp = 6;
         break;
     }
   }
 }
-//Assigns ability scores/skill proficiencies
+//Assigns ability scores
 function assignAblScores() {
   for (var i = 0; i < allChars.length; i++) {
     switch (allChars[i].job) {
@@ -215,14 +245,22 @@ function assignAblScores() {
 }
 
 //Calculates ability modifiers
-function calcModifiers() {
+function calcAblMods() {
   for (var i = 0; i < allChars.length; i++) {
     for (var e = 0; e < allChars[i].ablScores.length; e++) {
-      allChars[i].modifiers[e] = Math.floor((allChars[i].ablScores[e] - 10)/2);
+      allChars[i].ablMods[e] = Math.floor((allChars[i].ablScores[e] - 10)/2);
     }
   }
 }
 
+//calculates proficiency modifiers: UNFINISHED
+// function calcProMods() {
+//   for (var i = 0; i < allChars.length; i++) {
+//     for (var e = 0; e < ablPros.length; e++) {
+//       switch()
+//     }
+//   }
+// }
 
 //----------------FUNCTION INVOCATIONS----------------
 
@@ -232,7 +270,7 @@ new Character('Leo', 'Dragonborn', 'White', 'Rogue');
 new Character('Elizabeth', 'Elf', 'Dark Elf (Drow)', 'Cleric');
 assignBackgroundHealth();
 assignAblScores();
-calcModifiers();
+calcAblMods();
 console.log(allChars);
 
 //hides subraces on page load
