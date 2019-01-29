@@ -62,6 +62,34 @@ function assignAblscores() {
       case jobs[11]: allChars[i].ablscores = [8, 13, 10, 15, 14, 12];
     }
   }
+  for (var i = 0; i < allChars.length; i++) {
+    switch(allChars[i].race) {
+      case races[0]: allChars[i].ablscores[2] += 2;
+      case races[1]: allChars[i].ablscores[1] += 2;
+      case races[2]: allChars[i].ablscores[1] += 2;
+      case races[3]: 
+        allChars[i].ablscores[0]++;
+        allChars[i].ablscores[1]++;
+        allChars[i].ablscores[2]++;
+        allChars[i].ablscores[3]++;
+        allChars[i].ablscores[4]++;
+        allChars[i].ablscores[5]++;
+      case races[4]: 
+        allChars[i].ablscores[0] += 2;
+        allChars[i].ablscores[5]++;
+      case races[5]: allChars[i].ablscores[3] += 2;
+      case races[6]: 
+        allChars[i].ablscores[5] += 2;
+        allChars[i].ablscores[4]++;
+        allChars[i].ablscores[1]++;
+      case races[7]: 
+        allChars[i].ablscores[0] += 2;
+        allChars[i].ablscores[2]++;
+      case races[8]: 
+        allChars[i].ablscores[5] += 2;
+        allChars[i].ablscores[3]++;
+    }
+  }
 }
 
 
