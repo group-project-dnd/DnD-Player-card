@@ -5,7 +5,7 @@ header {
 body { 
 background-image: url("../images/DwarfTheme.jpg");  
 background-repeat: no-repeat;
-background-size: 100% auto;
+background-size: 100% 100%;
 /* color: #ff0000; */
 }
 
@@ -13,11 +13,12 @@ section.race {
   display: inline-block;
   position: relative;
   border: 2px solid black;
-  width: 13vw;
+  width: 15vw;
   height:550px;
-  margin-right: 4vw;
+  margin-right: 2vw;
   margin-left: 3vw;
   font-size: 30px;
+  background: rgba(255, 255, 255, 0.5)
 }
 
 .race li {
@@ -30,6 +31,7 @@ section.role{
   width: 13vw;
   height: 550px;
   font-size: 30px;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .role li {
@@ -41,7 +43,6 @@ body{
 }
 content{
   width: 90vw;
-  border: solid;
   display:block;
   height: 750px;
 }
@@ -49,10 +50,9 @@ aside{
   border: solid;
   margin-top: 20px;
   width: 800px;
-  background:rgba(255,255,255,0.5);
-}
-aside{
+  background:rgba(255, 255, 255, 0.5);
   font-size: 20px;
+  height:650px;
 }
 #subraces{
   float: left;
@@ -65,16 +65,21 @@ aside{
 button{
   position: absolute;
   top: 700px;
-  left: 40%;
-  width: 150px;
-  height: 50px;
-  /* background-image: url("images/buttonImg.jpg") */
+  left: 35%;
+  width: 250px;
+  height: 75px;
+  background-image: url("../images/buttonImg.jpg");
+  background-size: 100% 100%;
+  border: none;
+  color: rgb(204, 199, 199);
+  font-size: 25px;
 }
 
 #characterName {
-  border: solid black;
+  border-top: solid black;
   height: 45px;
   font-size: 30px;
+  padding-top: 5px;
 }
 
 #characterName input {
