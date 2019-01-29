@@ -12,6 +12,7 @@ body {
   width: 13vw;
   height:400px;
   margin-right: 4vw;
+  margin-left: 3vw;
 }
 
 .role{
@@ -28,4 +29,18 @@ content{
   width: 90vw;
   border: solid;
   display:block;
+}
+aside{
+  border: solid;
+}
+#subraces{
+  float: left;
+  width: 20vw
+}
+#subjobs  {
+  float: right;
+  width: 32vw;
+}
+button{
+  align-self: center;
 }
