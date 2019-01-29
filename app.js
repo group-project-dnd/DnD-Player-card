@@ -6,7 +6,7 @@ var races = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Gnome', 'Half-E
 var jobs = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorceror', 'Warlock', 'Wizard'];
 var backgrounds = ['Acolyte', 'Charlatan', 'Criminal', 'Entertainer', 'Folk Hero', 'Guild Artisan', 'Hermit', 'Noble', 'Outlander', 'Sage', 'Sailor', 'Soldier'];
 var subraces = ['Hill Dwarf', 'Mountain Dwarf', 'High Elf', 'Wood Elf', 'Dark Elf (Drow)', 'Lightfoot', 'Stout', 'Forest Gnome', 'Rock Gnome'];
-var proficiencies = ['Athletics', 'Acrobatics', 'Sleight of Hand', 'Stealth', 'Arcana', 'History', 'Investigation', 'Nature', 'Religion', 'Animal Handling', 'Insight', 'Medicine', 'Perception', 'Survival', 'Deception', 'Intimidation', 'Performance', 'Persuasion'];
+var proficiencies = ['STR Saving Throws', 'Athletics', 'DEX Saving Throws', 'Acrobatics', 'Sleight of Hand', 'Stealth', 'Arcana', 'History', 'Investigation', 'Nature', 'Religion', 'Animal Handling', 'Insight', 'Medicine', 'Perception', 'Survival', 'Deception', 'Intimidation', 'Performance', 'Persuasion'];
 
 var allChars = [];
 
@@ -34,7 +34,7 @@ function assignBackgroundHealth() {
     switch (allChars[i].job) {
       case jobs[0]:
         allChars[i].background = backgrounds[8];
-        allChars[i].ablPros.push()
+        // allChars[i].ablPros.push()
         allChars[i].hitdie = 'd12';
         allChars[i].hp = 12;
         break;
@@ -229,7 +229,7 @@ function calcModifiers() {
 new Character('Harry', 'Tiefling', '', 'Wizard');
 new Character('Aaron', 'Half-Orc', '', 'Fighter');
 new Character('Leo', 'Dragonborn', 'White', 'Rogue');
-new Character('Elizabeth', 'Halfling', 'Lightfoot', 'Cleric');
+new Character('Elizabeth', 'Elf', 'Dark Elf (Drow)', 'Cleric');
 assignBackgroundHealth();
 assignAblScores();
 calcModifiers();
