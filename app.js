@@ -62,6 +62,6 @@ for (var i = 0; i < allChars.length; i++) {
 
 //hides subraces on page load
 var sub = document.getElementsByClassName('sub');
-for(var i = 0; i < sub.length; i++) {
-  sub[i].style.display = 'none';
-}
+// for(var i = 0; i < sub.length; i++) {
+//   sub[i].style.display = 'none';
+// }
