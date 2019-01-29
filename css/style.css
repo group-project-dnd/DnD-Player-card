@@ -1,16 +1,20 @@
+header{
+  margin-bottom: 35px;
+}
 body {
   background-color: slategrey;
 }
 
-.race ul {
-  position: relative;
+.race {
+  display: inline-block;
+  border: 2px solid black;
   text-align: left;
-  float: left;
+  width: 80px;
 }
 
-.class ul {
-  position: relative;
-  float: right;
-  text-align: right;
+.role{
+  display: inline-block;
+  border: 2px solid black;
+  /* position: relative; */
+  width: 80px;
 }
-
