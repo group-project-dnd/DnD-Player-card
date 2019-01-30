@@ -276,5 +276,12 @@ console.log(allChars);
 //hides subraces on page load
 var sub = document.getElementsByClassName('sub');
 for (var i = 0; i < sub.length; i++) {
-  sub[i].style.display = 'none';
+  sub[i].style.visibility = "hidden";
 }
+
+var race= document.querySelector("section.race input[name='race']")
+var subrace = document.getElementsByClassName("subrace");
+function handleRaceChange(event){
+  console.log(race.value);
+}
+race.addEventListener("change",handleRaceChange);
