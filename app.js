@@ -11,7 +11,7 @@ var proficiencies = ['STR Saving Throws', 'Athletics', 'DEX Saving Throws', 'Acr
 var allChars = [];
 
 // inventory organized by class
-var barbInv ='Greataxe, 2 handaxes, 4 javelins, a backpack, a bedroll, 2 costumes, 5 candles, 5 days of rations, awaterskin, a disguise kit, staff, a hunting trap, a trophy from an animal you killed a set of traveler’s clothes, and a belt pouch containing 10 gp.';
+var barbarianInv ='Greataxe, 2 handaxes, 4 javelins, a backpack, a bedroll, 2 costumes, 5 candles, 5 days of rations, awaterskin, a disguise kit, staff, a hunting trap, a trophy from an animal you killed a set of traveler’s clothes, and a belt pouch containing 10 gp.';
 var bardInv = 'A rapier, leather armor, a dagger, a lute, a flute, the favor of an admirer, a costume, and a belt pouch containing 15 gp, , a backpack, a bedroll, 2 costumes, 5 candles, 5 days of rations, a waterskin, and a disguise kit.';
 var clericInv = 'Equipment: Mace, Chainmail, light crossbow, 20 bolts, sheild, holy symbol * 2, backpack, a blanket, 10 candles, a tinderbox, an alms box, 2 blocks of incense, a censer, vestments, 2 days of rations, a waterskin, a prayer book or prayer wheel, 5 sticks of incense, vestments, a set of common clothes, and a belt pouch containing 15 gp.';
 var druidInv ='A wooden shield, a mace, leathre armor, a duidic focus, A scroll case stuffed full of notes from your studies or prayers, a winter blanket, a set of common clothes, an herbalism kit, a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin, 50 feet hemp rope, and 5 gp. ';
@@ -23,11 +23,44 @@ var rogueInv = 'Rapier, shortbow and 20 arrows, leather armor, two daggers, thie
 var sorcererInv = 'Light crossbow, 20 bolts, arcane focus, 2 * daggersa bottle of black ink, a quill, a small knife, a letter from a dead colleague, a set of common clothes, a belt containing 10gp a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin, 50 feet of hempen rope.';
 var warlockInv = 'Light Crossbow, 20 bolts, arcane focus, 2 daggers, a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin 50 feet of hempen rope, fine clothes, a disguise kit, a set of weighted dice, and a belt pouch containing 15 gp.';
 var wizardInv = 'A quarterstaff, an arcane focus, a spellbook, a backpack, a book of lore, a bottle of ink, an ink pen, 10 sheets of parchment, a little bag of sand, and a small knife, Scribe’s tools, a letter of introduction from your guild, a set of traveler’s clothes, and a belt pouch containing 15 gp.';
-allInventories = [barbarianInv, bardInv, clericInv, druidInv, fighterInv, monkInv, paladinInv, rangerInv, rogueInv, sorcererInv, warlockInv, wzardInv];
+var inventoryByClass = [barbarianInv, bardInv, clericInv, druidInv, fighterInv, monkInv, paladinInv, rangerInv, rogueInv, sorcererInv, warlockInv, wizardInv];
 // collection of features
-allFeatures = [barbarianInv, bardInv, clericInv, druidInv, fighterInv, monkInv, paladinInv, rangerInv, rogueInv, sorcererInv, warlockInv, wzardInv];
-//collection of proficiency lists
-allSkills = [barbarianSkills, bardSkills, clericSkills, druidSkills, fighterSkills, monkSkills, paladinSkills, rangerSkills, rogueSkills, sorcererSkills, warlockSkills, wzardSkills];
+var dwarfFeatures = 'dark vision, advantage on saving throws against poison, resistance to poison damage, add proficiency *2 on Intelligence (History) check related to the stonework';
+var elfFeatures = 'sark vision, adv on saving throws vs charmed. Magic can’t put you to sleep, Trance instead of sleep';
+var halflingFeatures ='size small, speed 25, lucky(reroll your 1 on attack rolls, ability checks, and saving throws), adv on saving throws vs frightened, can move through spaces of creatures larger than you';
+var humanFeatures ='';
+var dragonbornFeatures = '';
+var gnomeFeatures = 'size small, darkvision, adv on intelligence, wisdom and charisma saving throws vs magic';
+var halfElfFeatures = 'darkvision, adv on saving throws against charmed, and magic cannot put them to sleep';
+var halfOrcFeatures  = 'When dropped to 0, once per long rest you can be dropped to 1 hp. When you score a critical hit, you may roll one extra damage dice.';
+var tieflingFeatures = 'darkvision, resistance to fire damage';
+var raceFeatures = [dwarfFeatures, elfFeatures, halflingFeatures,  humanFeatures, dragonbornFeatures, gnomeFeatures, halfElfFeatures, halfOrcFeatures, tieflingFeatures];
+var hillFeatures = 'max hp +1 for every level';
+var mountainFeatures = '';
+var highFeatures = '';
+var woodFeatures = 'can hide lightly when obscured by nature'; 
+var darkFeatures = 'when in direct sunlight, disadvantage on perception';
+var lightfootFeatures = 'can be lightly obscured by a creature bigger than you';
+var stoutFeatures = 'adv on saving throws vs poison, resistance to poison'; 
+var blackFeatures = 'resistance to acid, breath weapon: acid 5x30 line (dex save)'; 
+var blueFeatures = 'resistance to lighting, breath weapon: lightning 5x30 line (dex save)'
+var brassFeatures = 'resistance to fire, breath weapon: fire 5x30 line (dex save'; 
+var bronzeFeatures = 'resistance to lightning, breath weapon: lightning 5x30 line (dex save)'; 
+var copperFeatures = 'resistance to acid, breath weapon: acid 5x30 line (dex save)';
+var goldFeatures = 'resistance to fire, breath weapon: fire 15 foot cone (dex save)';
+var greenFeatures = 'resistance to poison, breath weapon: poison 15 foot cone (con save)';
+var redFeatures = 'resistance to fire, breath weapon: fire 15 foot cone (dex save)'
+var silverFeatures = 'resistance to cold, breath weapon: cold 15 foot cone';
+var whiteFeatures = 'resistance tocold, breath weapon: cold 15 foot cone';
+var forestFeatures = 'can speak with small beasts and understand them'; 
+var rockFeatures = 'history checks on maic items, alchemical objects, or technological devices + proficiency*2';
+
+var subraceFeatures = [hillFeatures, mountainFeatures, highFeatures, woodFeatures, darkFeatures, lightfootFeatures, stoutFeatures, blackFeatures, brassFeatures, bronzeFeatures, copperFeatures, goldFeatures, greenFeatures, redFeatures, silverFeatures, whiteFeatures, forestFeatures, rockFeatures];
+// classFeatures = [barbarianFeatures, bardFeatures, clericFeatures, druidFeatures, fighterFeatures, monkFeatures, paladinFeatures, rangerFeatures, rogueFeatures, sorcererFeatures, warlockFeatures, wzardFeatures];
+// //collection of proficiency lists
+// raceSkills =[dwarfskills, elfSkills, halflingSkills, humanSkills, dragonbornSkills, gnomeSkills, halfElfSkills, halfOrcSkills, tieflingSkills];
+// [hillSkills, mountainSkills, highSkills, woodSkills, darkSkills, lightfootSkills, stoutSkills, blackSkills, brassSkills, bronzeSkills, forestSkills, rockSkills];
+// classSkills = [barbarianSkills, bardSkills, clericSkills, druidSkills, fighterSkills, monkSkills, paladinSkills, rangerSkills, rogueSkills, sorcererSkills, warlockSkills, wizardSkills];
 //----------------FUNCTION DECLARATIONS----------------
 
 function Character(name, race, subrace, job) {
