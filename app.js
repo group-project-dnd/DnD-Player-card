@@ -132,6 +132,29 @@ var wizardSkills = `Daggers, Darts, Slings, Quarterstaffs, Light Crossbows, Wisd
 
 // classSkills = [barbarianSkills, bardSkills, clericSkills, druidSkills, fighterSkills, monkSkills, paladinSkills, rangerSkills, rogueSkills, sorcererSkills, warlockSkills, wizardSkills];
 
+var cantTiefling = 'Thaumatergy'
+
+
+var cantHighElf = 'Minor Illusion'
+var cantForestGnome = 'Minor Illusion'
+
+//Class Cantrips
+
+var cantBard = ['Vicious Mockery', 'Mending'];
+var cantCleric = ['Sacred Flame', 'Spare the Dying', 'Guidance'];
+var cantDruid = ['Druidcraft', 'Shilelagh'];
+var cantSorcerer =['Chill Touch', 'Fire Bolt', 'Prestigitation', 'Mage Hand'];;
+var cantWarlock = ['Mage Hand', 'Elderitch Blast'];;
+var cantWizard = ['Firebolt', 'Mage Hand', 'Mending'];
+
+//class Spells
+var spellBard = ['Cure Wounds', 'Detect Magic', 'Dissonant Whispers'];
+var spellCleric =['Cure Wounds', 'Detect Magic', 'Sheild of Faith'];
+var spellDruid = ['Cure Wounds', 'Detect Magic', 'Farie Fire'];
+var spellSorcerer =['Shield', 'Magic Missile'];
+var spellWarlock = ['Burning Hands', 'Armor of Agathys'];
+var spellWizard = ['Color Spray', 'Detect Magic', 'Find Familiar', 'Mage Armor', 'Magic Missile', 'Sleep'];
+
 //----------------FUNCTION DECLARATIONS----------------
 
 function Character(name, race, subrace, job) {
