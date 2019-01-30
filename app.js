@@ -279,9 +279,16 @@ for (var i = 0; i < sub.length; i++) {
   sub[i].style.visibility = "hidden";
 }
 
-var race= document.querySelector("section.race input[name='race']")
-var subrace = document.getElementsByClassName("subrace");
+var race= document.getElementById('race');
 function handleRaceChange(event){
-  console.log(race.value);
+  for (var i = 0; i < races.length; i++) {
+    if (event.target.value === races[i].toLowerCase()) {
+      for (var i = 0; i < sub.length; i++) {
+        sub[i].style.visibility = "hidden";
+      }
+      var subrace = document.getElementById(event.target.value);
+      subrace.style.visibility = "visible";
+    }
+  }
 }
-race.addEventListener("change",handleRaceChange);
+race.addEventListener("click",handleRaceChange);
