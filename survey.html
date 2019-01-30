@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <head>
-  <title> Group Project 201: Survey </title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" type="image/png" href="images/favicon2.png.png">
@@ -14,8 +13,8 @@
     </title>
   </header>
   <content>
-    <p id="characterName"> Character Name <input type="text" name="charName"></p>
-    <section class=race>
+    <p>Character Name <input type="text" name="charName"></p>
+    <section id=race>
       <h2>Race</h2>
       <ul>
         <li><input type="radio" name="race" value="dwarf"> Dwarf</li>
@@ -30,14 +29,14 @@
 
       </ul>
     </section>
-    <section class="role">
+    <section id="role">
       <h2>Class</h2>
       <ul>
         <li><input type="radio" name="job" value="barbarian"> Barbarian</li>
         <li><input type="radio" name="job" value="bard"> Bard</li>
         <li><input type="radio" name="job" value="cleric"> Cleric</li>
         <li><input type="radio" name="job" value="druid"> Druid</li>
-        <li><input type="radio" name="job" value="figther"> Fighter</li>
+        <li><input type="radio" name="job" value="fighter"> Fighter</li>
         <li><input type="radio" name="job" value="monk"> Monk</li>
         <li><input type="radio" name="job" value="paladin"> Paladin</li>
         <li><input type="radio" name="job" value="ranger"> Ranger</li>
@@ -65,8 +64,7 @@
       </section>
       <section id="elf" class="sub">
         <p>Elf: A long lived race of slender and graceful people known for their affinity with nature.</p>
-        <p>Attributes: Dexterity+2, 30 speed, dark vision, Proficiency: perception. Proficiency with short bow,
-          shortsword, longsword, longbow. Adv on saving throws vs charmed. Magic can’t put you to sleep, Trance instead
+        <p>Attributes: Dexterity+2, 30 speed, dark vision, Proficiency: perception. Adv on saving throws vs charmed. Magic can’t put you to sleep, Trance instead
           of sleep. Can speak, read, and write Common and Elvish.
         </p>
         <ul>
@@ -81,7 +79,7 @@
             lights cantrip.</li>
         </ul>
       </section>
-      <section id="halfing" class="sub ">
+      <section id="halfling" class="sub ">
         <p>Halfling: A short practical peoples that are often kind and curious, known for their comforts of the home.
         </p>
         <p>Attributes: Dexterity +2, size small, speed 25, lucky(reroll your 1 on attack rolls, ability checks, and
@@ -89,13 +87,13 @@
           speak, read, and write Common and Halfling.
         </p>
         <ul>
-          <li><input type="radio" name="subrace" value="lightfoot"> Lightfoot: Charisma +1, can be lightly obscured by
-            a ∏creature larger than you.</li>
+          <li><input type="radio" name="subrace" value="lightfoot"> Lightfoot: Charisma +1, can be lightly obscured by a creature bigger than you,
+        .</li>
           <li><input type="radio" name="subrace" value="stout"> Stout: Constitution +1, adv on saving throws vs poison,
             resistance to poison.</li>
         </ul>
       </section>
-      <section id="Human" class="sub">
+      <section id="human" class="sub">
         <p>Human: Widely adaptable and ambitions, a people who widely vary in tastes, morals and customs. While less
           long-lived as some of the other races, their ambition spreads them far and wide.</p>
         <p>Attributes: all abilities +1, speed 30, can speak, read and write Common and 1 extra language
@@ -148,7 +146,7 @@
           <li> <input type="radio" name="subrace" value="forest">Forest: Dexterity +1. Know Minor Illusion Cantrip. Can
             speak with small beasts.</li>
           <li><input type="radio" name="subrace" value="stout"> Rock: Constitution +1. History checks on maic items,
-            lachemical objects, or technological devices + proficiency*2</li>
+            alhemical objects, or technological devices + proficiency*2</li>
         </ul>
       </section>
       <section id="half-elf" class="sub">
@@ -177,8 +175,8 @@
           cantrip.</p>
       </section>
     </aside>
-    <aside id=subjobs>
-      <section id=barbarian class=sub>
+    <aside id="subjobs">
+      <section id="barbarian" class="sub">
         <h4>Barbarian</h4>
         <p>Barbarians are hand to hand combatants that rely on their strength, their constitution, and their rage in
           order to fight.</p>
@@ -186,8 +184,8 @@
         <p>Hit Dice: 1d12 per barbarian level. Hit Points at 1st Level: 12 + your Constitution modifier. </p>
         Proficiencies: Armor: Light armor, medium armor, shields. Weapons: Simple weapons, martial weapons. Saving
         Throws: Strength, Constitution. </p>
-        Rage: In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While
-        raging, you gain the following benefits if you aren’twearing heavy armor: You have advantage on Strength checks
+        Rage: Enter a rage as a bonus action and gain the following benefits if you aren’t wearing heavy armor: You
+        have advantage on Strength checks
         and Strength saving throws. When you make a melee weapon attack using Strength, you gain a bonus to the damage
         roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian
         table. You have resistance to bludgeoning, piercing, and slashing damage.</p>
@@ -199,12 +197,13 @@
           Charisma. Proficiencies: Animal Handling, Nature, Athletics, Survival, Hand Drum, Sylvan Language. Equipment:
           Greataxe, 2 handaxes, 4 javelins, a backpack, a bedroll, 2 costumes, 5 candles, 5 days of rations, a
           waterskin, a disguise kit, staff, a hunting trap, a trophy from an animal you killed a set of traveler’s
-          clothes, and a belt pouch containing 10 gp. Feature: Wanderer - You have an excellent memory for maps and
+          clothes, and a belt pouch containing 10 gp. </p>
+        <p> Feature: Wanderer - You have an excellent memory for maps and
           geography, and you can always recall the general layout of terrain, settlements, and other features around
           you. In addition, you can find food and fresh water for yourself and up to five other people each day,
-          provided that the land offers berries, small game, water,etc.</p>
+          provided that the land offers berries, small game, water, etc.</p>
       </section>
-      <section id=bard class=sub>
+      <section id="bard" class="sub">
         <h4>Bard</h4>
         <p> Bards are in general are a jack-of-all-trade type of adventurer. Their magic is incorporated with their
           trade of entertainment, often supportive, and sometimes woven amongst melee attacks.</p>
@@ -217,15 +216,14 @@
         <p> For this class, the following optimizations have been chosen:</p>
         <p>Entertainer background. Stat array: 8 Strength, 14 Dexterity, 10 Constitution, 13 Intelligence, 12 Wisdom,
           15 Charisma. Proficiencies: Persuasion, History, Deception, Acrobatics, Preformance. Instruments: lyre, lute,
-          flute, hand drum. Tools: Disguise kit. Equipment: A lute, a flute , the favor of an admirer, a costume, and a
-          belt pouch containing 15 gp, a rapier, leather armor, a dagger, a backpack, a bedroll, 2 costumes, 5 candles,
-          5 days of rations, a waterskin, and a disguise kit. Feature: By Popular Demand - You can always find
+          flute, hand drum. Tools: Disguise kit. Equipment: A rapier, leather armor, a dagger, a lute, a flute, the favor of an admirer, a costume, and a belt pouch containing 15 gp, , a backpack, a bedroll, 2 costumes, 5 candles, 5 days of rations, a waterskin, and a disguise kit. </p>
+        <p>Feature: By Popular Demand - You can always find
           somewhere to preform, which will usually give you free lodging and food as long as you preform each night,
           but be careful, you may become a public figure. </p>
         <p> Spells: Cantrips- Vicious Mockery, Mending. Spells known- Comprehend Languages, Cure Wounds, Detect Magic,
           Dissonant Whispers. 2*level 1 spell slot.</p>
       </section>
-      <section id=Cleric class=sub>
+      <section id="cleric" class="sub">
         <h4>Cleric</h4>
         <p> Clerics are adventurers that gain their magical prowess from the divine. Praying to the gods, they can fill
           a number of roles, but are best known for healing and combatting the unholy.</p>
@@ -239,33 +237,201 @@
           Sylvan and Celestial. Equipment: Mace, Chainmail, light crossbow, 20 bolts, sheild, holy symbol * 2,
           backpack, a blanket, 10 candles, a tinderbox, an alms box, 2 blocks of incense, a censer, vestments, 2 days
           of rations, a waterskin, a prayer book or prayer wheel, 5 sticks of incense, vestments, a set of common
-          clothes, and a belt pouch containing 15 gp</p>
-        <p> Spells: Cantrips- Sacred Flame, Spare the Dying, Guidance. Spells known- Cure Wounds, Detect Magic, Sheild
-          of Faith. 2*level 1 spell slot.</p>
+          clothes, and a belt pouch containing 15 gp.</p>
+        <p>Feature: Shelter of the Faithful - Temples/shrines/clerics that
+          share yoru faith will provide modest services for your party, and will support you at a modest lifestyle.</p>
+        <p> Spells: Cantrips- Sacred Flame, Spare the Dying, Guidance. Spells Prepared- Cure Wounds, Detect Magic,
+          Sheild
+          of Faith. 2*level 1 spell slot. You may change your prepared spells after a long rest.</p>
       </section>
-      <section id=Druid class=sub>
+      <section id="druid" class="sub">
         <h4>Druid</h4>
-        <p> Druids are magic users that harness the power of nature. Often living in harmony with nature, at later levels they have the ability to shapeshift into beasts.</p>
+        <p> Druids are magic users that harness the power of nature. Often living in harmony with nature, at later
+          levels they have the ability to shapeshift into beasts.</p>
         <p>As a druid, the following are features of your class at level 1:</p>
         <p>Hit Dice: 1d8. Hit points at 1st level: 8 + your Constitution modifier. </p>
-        <p>Proficiencies: Armor: Light armor, medium armor, shields. Weapons: Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings,spears. Tools: Herbalism Kit. Saving Throws: Intelligence, Wisdom.</p>
+        <p>Proficiencies: Armor: Light armor, medium armor, shields. Weapons: Clubs, daggers, darts, javelins, maces,
+          quarterstaffs, scimitars, sickles, slings,spears. Tools: Herbalism Kit. Languages: Druidic Saving Throws:
+          Intelligence, Wisdom.</p>
         <p> For this class, the following optimizations have been chosen:</p>
-        <p>Hermit background. Stat array: 10 Strength, 12 Dexterity, 14 Constitution, 13 Intelligence, 15 Wisdom, 8 Charisma. Proficiencies: Medicine, Animal Handling, Nature, Religion. Languages: Sylvan, Celestial. Equipment: A wooden shield, a mace, leathre armor, a duidic focus, A scroll case stuffed full of notes from your studies or prayers, a winter blanket, a set of common clothes, an herbalism kit, a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin, 50 feet hemp rope, and 5 gp</p>
-        <p> Spells: Cantrips- Druidcraft, Shilelagh. Spells known- Cure Wounds, Detect Magic, Farie Fire. 2*level 1 spell slot.</p>
+        <p>Hermit background. Stat array: 10 Strength, 12 Dexterity, 14 Constitution, 13 Intelligence, 15 Wisdom, 8
+          Charisma. Proficiencies: Medicine, Animal Handling, Nature, Religion. Languages: Sylvan, Celestial.
+          Equipment: A wooden shield, a mace, leathre armor, a duidic focus, A scroll case stuffed full of notes from
+          your studies or prayers, a winter blanket, a set of common clothes, an herbalism kit, a backpack, a bedroll,
+          a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin, 50 feet hemp rope, and 5 gp. </p>
+        <p>Feature: Discovery- In your hermitage you had a powerful discovery about the cosmos, dieties, or other
+          powerful beings.Work with your DM to determine the details.</p>
+        <p> Spells: Cantrips- Druidcraft, Shilelagh. Spells Prepared- Cure Wounds, Detect Magic, Farie Fire. 2*level 1
+          spell slot. You may change your prepared spells after a long rest.</p>
       </section>
-      <section id=Fighter class=sub>
+      <section id="fighter" class="sub">
         <h4>Fighter</h4>
-        <p> Fighters are adventurers that rely in their martial training to deal with encounters. Choosing to excel in a style of fighting, they come in all varieties, from large weapons users or sword and sheilds, to ranged combat or dexterity based fighting.</p>
+        <p> Fighters are adventurers that rely in their martial training to deal with encounters. Choosing to excel in
+          a style of fighting, they come in all varieties, from large weapons users or sword and sheilds, to ranged
+          combat or dexterity based fighting.</p>
         <p>As a fighter, the following are features of your class at level 1:</p>
         <p>Hit Dice: 1d10. Hit points at 1st level: 10 + your Constitution modifier. </p>
-        <p>Proficiencies: Armor: All armor, sheilds Weapons: All simple weapons, martial weapons. Saving Throws: Strength, Constitution</p> 
+        <p>Proficiencies: Armor: All armor, sheilds Weapons: All simple weapons, martial weapons. Saving Throws:
+          Strength, Constitution</p>
+        <p> Features:Second Wind- Once per short rest, on your turn use a bonus action to regain 1d10 + level hit
+          points.</p>
         <p> For this class, the following optimizations have been chosen:</p>
-        <!-- <p>Acolyte background. Life Domain. Stat array: 12 Strength, 10 Dexterity, 14 Constitution, 13 Intelligence, 15 Wisdom, 8 Charisma. Proficiencies: Medicine, Persuasion, Insight, Religion. Item: Heavy Armor. Languages: Sylvan and Celestial. Equipment: Mace, Chainmail, light crossbow, 20 bolts, sheild, holy symbol * 2, backpack, a blanket, 10 candles, a tinderbox, an alms box, 2 blocks of incense, a censer, vestments, 2 days of rations, a waterskin, a prayer book or prayer wheel, 5 sticks of incense, vestments, a set of common clothes, and a belt pouch containing 15 gp</p>
-        <p> Spells: Cantrips- Sacred Flame, Spare the Dying, Guidance. Spells known- Cure Wounds, Detect Magic, Sheild of Faith. 2*level 1 spell slot.</p> -->
-      </section>    
+        <p>Soldier background. Defensive fighting style (+1 ac with armor). Stat array: 15 Strength, 12 Dexterity, 14
+          Constitution, 10 Intelligence, 13 Wisdom, 8 Charisma. Proficiencies: Insight, Survival, Athletics,
+          Intimidation. Gaming set: Dragonchess. vehicles(land). Inventory: Chain mail, longsword, sheild, handaxe * 2,
+          a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, a waterskin, 50 feet of
+          hempen rope, an insignia of rank, a trophy taken from an enemy, a set of bone dice, a set of common clothes,
+          and a belt pouch containing 10 gp. </p>
+        <p>Feature: Military Rank- Soldiers loyal to your former organization still
+          recognize your rank and help you accordingly.</p>
+      </section>
+      <section id="monk" class="sub">
+        <h4>Monk</h4>
+        <p> Monks are adventurers who have gone through rigorous internal training, honing a magical energy commonly
+          called ki. </p>
+        <p>As a monk, the following are features of your class at level 1:</p>
+        <p>Hit Dice: 1d8. Hit points at 1st level: 8 + your Constitution modifier. </p>
+        <p>Proficiencies: Weapons: simple weapons, shortswords. Saving Throws: Strength, Dexterity</p>
+        <p>Features: Unarmored Defense - Beginning at 1st level, while you are wearing no armor and not wielding a
+          shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier. Martial Arts - Your unarmed
+          attacks can use dexterity start at 1d4 damage, and when you make an attack, you may make an unarmed attack as
+          a bonus action.</p>
+        <p> For this class, the following optimizations have been chosen:</p>
+        <p>Acolyte background. Proficiencies: Insight, Religion, Stealth, Acrobatics. Languages: Celestial, Druidic.
+          Inventory: Shortsword, 10 darts, a backpack, a crowbar, a hammer, 10 pitons, 10 torches, a tinderbox, 10 days
+          of rations, and a waterskin, 50 feet of hempen rope, holy symbol, a prayer book or prayer wheel, 5 sticks of
+          incense vestments, a set of common clothes, and a belt pouch containing 15 gp. </p>
+        <p>Feature: Shelter of the
+          Faithful - Temples/shrines/clerics that share yoru faith will provide modest services for your party, and
+          will support you at a modest lifestyle.</p>
+      </section>
+      <section id="paladin" class="sub">
+        <h4>Paladin</h4>
+        <p> As warriors that carry the ideals of gods on their shoulders, paladins are forced not only to live up to
+          their ideals and combat forces against, they must follow the callings of their god. In fighting their evil,
+          most take their job seriously with little room for comprimise. </p>
+        <p>As a paladin, the following are features of your class at level 1:</p>
+        <p>Hit Dice: 1d10. Hit points at 1st level: 10 + your Constitution modifier. </p>
+        <p>Proficiencies: Armor: All armor, sheilds. Weapons: Simple weapons, Martial Weapons. Saving Throws: Wisdom,
+          Charisma</p>
+        <p>Features: Divine Sense- 1 + Charisma modifier times per day, open your awareness to detect the location and
+          type of celestial, fiend or undead within 60 feet. Lay On Hands- You an touch someone, and heal their
+          ailments. You heal an amount equal to your paladin level * 5 per day, or remove a disease per paladin level
+          per day.</p>
+        <p> For this class, the following optimizations have been chosen:</p>
+        <p>Folk Hero background. Proficiencies: Animal Handling, Survival, Athletics, Religion. Tools: Woodcarver's Tools. Land Vehicles. Inventory: Longsword, shield, javelin * 5, chainmail, holy symbol, a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin, 50 feet o f hempen rope,woodcarver's Tools, a shovel, an iron pot, a set of common clothes, and a belt pouch containing 10 gp.</p>
+        <p>Feature: Rustic Hospitality - Since you come from the ranks of the common folk, you fit in among them and
+          can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a
+          danger to them unless it puts them in danger.</p>
+      </section>
+      <section id="ranger" class="sub">
+        <h4>Ranger</h4>
+        <p> Roaming the wilderness and tracking animals, these warriors are adept and at home when outside
+          civilization. While perhaps lacking the brute force of a barbarian, or the wonders of a magicuser, their
+          rescorcfulness is unparalelled</p>
+        <p>As a paladin, the following are features of your class at level 1:</p>
+        <p>Hit Dice: 1d10. Hit points at 1st level: 10 + your Constitution modifier.</p>
+        <p>Proficiencies: Armor: Light armor, medium armor, sheilds. Weapons: Simple weapons, Martial Weapons. Saving
+          Throws: Strength, Dexterity</p>
+        <p> For this class, the following optimizations have been chosen:</p>
+        <p>Outlander background. Features: Favored terrain- Forest-in the forest, you are unimpeded by difficult
+          terrain, will not get lost, can travel stealthily at a normal pace, can forage twice as much food, can track
+          creatures and know their numbers. Favored Enemy- beasts and oozes - you have adv on survial checks to track
+          them, and learn a language they speak, if they speak at all. Proficiencies: Stealth, Animal Handling, Nature,
+          Athletics, Survival. Instrument: Flute. Inventory: Scale mail, shortsword * 2, longbow, quiver, arrows * 20,a
+          backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin, 50 feet hempen
+          rope, a staff, a hunting trap, a trophy from an animal you killed, a set of traveler’s clothes, and a belt
+          pouch containing 10 gp.</p>
+        <p>Feature: Wanderer. You have an excellent head for maps and geography, recalling
+          layout, and are capable of providing food and fresh water for yourself and 5 others if the land has it.</p>
+      </section>
+      <section id="rogue" class="sub">
+        <h4>Rogue</h4>
+        <p> Slinking through the shadows, and picking the opportune time to strike, these adventurers are sought after
+          for covert missions, or even simply to deal killing strikes from range. They may not be seen, but they are
+          likely getting something done.</p>
+        <p>As a rogue, the following are features of your class at level 1:</p>
+        <p>Hit Dice: 1d8. Hit points at 1st level: 8 + your Constitution modifier.</p>
+        <p>Proficiencies: Armor: Light armor. Weapons: Simple weapons, hand crossbows, longswords, rapiers,
+          shortswords. Tools: Theives' tools. Saving
+          Throws: Dexterity, Intelligence.</p>
+        <p>Features: Sneak attack - Once per turn, you may deal an extra 1d6 to one creature you hit with an attack if
+          you have advantage on that roll, or if an enemy is within 5 feed of i, isn't incapacitated and you do not
+          have disadvantage on your attack. The attack must be finesse or ranged.</p>
+        <p> For this class, the following optimizations have been chosen:</p>
+        <p>Criminal background. Proficiencies: Stealth, Sleight of hand, Acrobatics, Persuasion, Investigation,
+          Deception. Feature - expertise. Two skills you are proficient with get double your proficiency (chosen
+          stealth and sleight of hand). Gaming set: dice. Tools: theives' tools. Inventory: Rapier, shortbow and 20
+          arrows, leather armor, two daggers, thieves' tools, a backpack, a bag of 1,000 ball bearings, 10 feet of
+          string, a bell, 5 candles, a crowbar, a hammer, 10 pitons, a hooded lantern, 2 flasks of oil, 5 days rations,
+          a tinderbox, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it. a crowbar,
+          a set of dark common clothes including a hood, and a belt pouch containing 15 gp.
+          <p>Feature: Criminal Contact - You have a trustworthy reliable contact that acts as a liason to a network of
+            criminals, and will help get messages to other criminals.</p>
+      </section>
+      <section id="sorcerer" class="sub">
+        <h4>Socrcerer</h4>
+        <p> Born with access to innate magical powers, this adventurer weilds magic that springs from inside. Not
+          relying on spellbooks, gods, or patrons, sorcerers must learn to harness their powers. Often unexplained
+          powers can lead to suspicion amongst others, so often sorcerers must choose their allies carefully.</p>
+        <p>As a sorcerer, the following are features of your class at level 1:</p>
+        <p>Hit Dice: 1d6. Hit points at 1st level: 6 + your Constitution modifier.</p>
+        <p>Proficiencies: Weapons: Daggers, darts, slings, quarterstaffs, light crossbows. Saving Throws: Constitution,
+          Charisma.</p>
+        <p>Features: Draconic Resilience - Your health increases by 1 for each level and your base AC is 13 without
+          armor.</p>
+        <p> For this class, the following optimizations have been chosen:</p>
+        <p>Sage background. Green Draconic Ancestory - Resistance poison damage. Proficiencies: Arcana, Insight,
+          Acrobatics, History, Religion. Laguages: Celestial, Druidic. Inventory: Light crossbow, 20 bolts, arcane
+          focus, 2 * daggersa bottle of black ink, a quill, a small knife, a letter from a dead colleague, a set of
+          common clothes, a belt containing 10gp a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of
+          rations, and a waterskin, 50 feet of hempen rope. </p>
+        <p> Feature: Researcher - when attempting to recall or learn lore, if you don't know it, you know where to find
+          it.</p>
+        <p>Spells: Cantrips - Chill Touch, Fire Bolt, Prestigitation, Mage hand. Spells known Shield, Magic Missile
+          level 1 spell slots * 2</p>
+      </section>
+      <section id="warlock" class="sub">
+        <h4>Warlock</h4>
+        <p> Deriving their powers from powerful beings, this adventurer is often percieved as nefarious with ulterior
+          motives. Warlocks seek power for their own reasons, but their goals and aspirations may or may not align with
+          their patron's. While their power is derived from another, it is no less powerful than any other's and in
+          some cases stronger.</p>
+        <p>As a warlock, the following are features of your class at level 1:</p>
+        <p>Hit Dice: 1d8. Hit points at 1st level: 8 + your Constitution modifier.</p>
+        <p>Proficiencies: Armor: Light armor. Weapons: Simple weapons. Saving Throws: Wisdom, Charisma.</p>
+        <p> Your Spells recover at short rests instead of long rests.</p>
+        <p> For this class, the following optimizations have been chosen:</p>
+        <p>Charlatan background. Fiend Patron. Proficiencies: Intimidation, Arcana, Deception, Sleight of Hand. Tool:
+          Disguise Kit, Forgery kit. Feature - Dark One's Blessing when you reduce an enemy to 0hp, you gain temporary
+          hp equal to your charisma modifier + Warlock level. Gaming set: dice. Tools: theives' tools. Inventory:Light
+          Crossbow, 20 bolts, arcane focus, 2 daggers, a backpack, a bedroll,
+          a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin 50 feet of hempen rope, fine
+          clothes, a disguise kit, a set of weighted dice, and a belt pouch containing 15 gp.</p>
+        <p>Spells: Cantrips - Mage Hand, Elderitch Blast. Spells known - Burning Hands, Armor of Agathys. Level 1 spell
+          slots * 1</p>
+        <p>Feature: False Identity - You have a second Identity with documentation, acquaintances and disguises.</p>
+      </section>
+      <section id="wizard" class="sub">
+        <h4>Wizard</h4>
+        <p> The classic magic user, a wizard is a scholar of the arcane, weilding their magical prowess through sheer
+          mental fortitude. Studying magic, they hold spellbooks that contain spells and incantations which they must
+          study to choose which they may use in the day.</p>
+        <p>As a rogue, the following are features of your class at level 1:</p>
+        <p>Hit Dice: 1d6. Hit points at 1st level: 6 + your Constitution modifier.</p>
+        <p>Proficiencies: Weapons: Daggers, darts, slings, quarterstaffs, light crossbows. Saving Throws: Wisdom,
+          Intelligence.</p>
+        <p>Features: Arcane Recovery - Once per day when you finish a short rest, you can choose expended spell slots
+          equal to half your wizard level rounded up to recover.</p>
+        <p> For this class, the following optimizations have been chosen:</p>
+        <p>Guild Artisan background(scribe). Proficiencies: Insight, Persuasion, Arcana, History. Language: Druidic.
+          Tools: Scribe’s tools. Inventory: A quarterstaff, an arcane focus, a spellbook, a backpack, a book of lore, a bottle of ink, an ink pen, 10 sheets of parchment, a little bag of sand, and a small knife, Scribe’s tools, a letter of introduction from your guild, a set of traveler’s clothes, and a belt pouch containing 15 gp.</p>
+        <p>Feature: Guild Membership- If you pay dues of 5gp per month, guild members of your guild will help provide
+          food, lodging, support you when needed within reason, or even pay for your funeral.</p>
+      </section>
     </aside>
     <button type="button">
-      Generate Charactersheet
+      Generate Character Sheet
     </button>
   </content>
   <script src="app.js"></script>

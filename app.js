@@ -3,12 +3,64 @@
 
 // var username = prompt('what is your name?');
 var races = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Gnome', 'Half-Elf', 'Half-Orc', 'Tiefling'];
-var jobs = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorceror', 'Warlock', 'Wizard'];
+var jobs = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard'];
 var backgrounds = ['Acolyte', 'Charlatan', 'Criminal', 'Entertainer', 'Folk Hero', 'Guild Artisan', 'Hermit', 'Noble', 'Outlander', 'Sage', 'Sailor', 'Soldier'];
 var subraces = ['Hill Dwarf', 'Mountain Dwarf', 'High Elf', 'Wood Elf', 'Dark Elf (Drow)', 'Lightfoot', 'Stout', 'Forest Gnome', 'Rock Gnome'];
 var proficiencies = ['STR Saving Throws', 'Athletics', 'DEX Saving Throws', 'Acrobatics', 'Sleight of Hand', 'Stealth', 'CON Saving Throws', 'INT Saving Throws', 'Arcana', 'History', 'Investigation', 'Nature', 'Religion', 'WIS Saving Throws', 'Animal Handling', 'Insight', 'Medicine', 'Perception', 'Survival', 'CHA Saving Throws', 'Deception', 'Intimidation', 'Performance', 'Persuasion'];
 
 var allChars = [];
+
+// inventory organized by class
+var barbarianInv ='Greataxe, 2 handaxes, 4 javelins, a backpack, a bedroll, 2 costumes, 5 candles, 5 days of rations, awaterskin, a disguise kit, staff, a hunting trap, a trophy from an animal you killed a set of traveler’s clothes, and a belt pouch containing 10 gp.';
+var bardInv = 'A rapier, leather armor, a dagger, a lute, a flute, the favor of an admirer, a costume, and a belt pouch containing 15 gp, , a backpack, a bedroll, 2 costumes, 5 candles, 5 days of rations, a waterskin, and a disguise kit.';
+var clericInv = 'Equipment: Mace, Chainmail, light crossbow, 20 bolts, sheild, holy symbol * 2, backpack, a blanket, 10 candles, a tinderbox, an alms box, 2 blocks of incense, a censer, vestments, 2 days of rations, a waterskin, a prayer book or prayer wheel, 5 sticks of incense, vestments, a set of common clothes, and a belt pouch containing 15 gp.';
+var druidInv ='A wooden shield, a mace, leathre armor, a duidic focus, A scroll case stuffed full of notes from your studies or prayers, a winter blanket, a set of common clothes, an herbalism kit, a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin, 50 feet hemp rope, and 5 gp. ';
+var fighterInv = 'Chain mail, longsword, sheild, handaxe * 2,a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, a waterskin, 50 feet of hempen rope, an insignia of rank, a trophy taken from an enemy, a set of bone dice, a set of common clothes, and a belt pouch containing 10 gp.';
+var monkInv= 'Shortsword, 10 darts, a backpack, a crowbar, a hammer, 10 pitons, 10 torches, a tinderbox, 10 days of rations, and a waterskin, 50 feet of hempen rope, holy symbol, a prayer book or prayer wheel, 5 sticks of incense vestments, a set of common clothes, and a belt pouch containing 15 gp.';
+var paladinInv = 'Longsword, shield, javelin * 5, chainmail, holy symbol, a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin, 50 feet o f hempen rope, woodcarver’s Tools, a shovel, an iron pot, a set of common clothes, and a belt pouch containing 10 gp.';
+var rangerInv = 'Scale mail, shortsword * 2, longbow, quiver, arrows * 20,a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin, 50 feet hempen rope, a staff, a hunting trap, a trophy from an animal you killed, a set of traveler’s clothes, and a belt pouch containing 10 gp.';
+var rogueInv = 'Rapier, shortbow and 20 arrows, leather armor, two daggers, thieves’ tools, a backpack, a bag of 1,000 ball bearings, 10 feet of string, a bell, 5 candles, a crowbar, a hammer, 10 pitons, a hooded lantern, 2 flasks of oil, 5 days rations, a tinderbox, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it. a crowbar, a set of dark common clothes including a hood, and a belt pouch containing 15 gp.';
+var sorcererInv = 'Light crossbow, 20 bolts, arcane focus, 2 * daggersa bottle of black ink, a quill, a small knife, a letter from a dead colleague, a set of common clothes, a belt containing 10gp a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin, 50 feet of hempen rope.';
+var warlockInv = 'Light Crossbow, 20 bolts, arcane focus, 2 daggers, a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin 50 feet of hempen rope, fine clothes, a disguise kit, a set of weighted dice, and a belt pouch containing 15 gp.';
+var wizardInv = 'A quarterstaff, an arcane focus, a spellbook, a backpack, a book of lore, a bottle of ink, an ink pen, 10 sheets of parchment, a little bag of sand, and a small knife, Scribe’s tools, a letter of introduction from your guild, a set of traveler’s clothes, and a belt pouch containing 15 gp.';
+var inventoryByClass = [barbarianInv, bardInv, clericInv, druidInv, fighterInv, monkInv, paladinInv, rangerInv, rogueInv, sorcererInv, warlockInv, wizardInv];
+// collection of features
+var dwarfFeatures = 'dark vision, advantage on saving throws against poison, resistance to poison damage, add proficiency *2 on Intelligence (History) check related to the stonework';
+var elfFeatures = 'sark vision, adv on saving throws vs charmed. Magic can’t put you to sleep, Trance instead of sleep';
+var halflingFeatures ='size small, speed 25, lucky(reroll your 1 on attack rolls, ability checks, and saving throws), adv on saving throws vs frightened, can move through spaces of creatures larger than you';
+var humanFeatures ='';
+var dragonbornFeatures = '';
+var gnomeFeatures = 'size small, darkvision, adv on intelligence, wisdom and charisma saving throws vs magic';
+var halfElfFeatures = 'darkvision, adv on saving throws against charmed, and magic cannot put them to sleep';
+var halfOrcFeatures  = 'When dropped to 0, once per long rest you can be dropped to 1 hp. When you score a critical hit, you may roll one extra damage dice.';
+var tieflingFeatures = 'darkvision, resistance to fire damage';
+var raceFeatures = [dwarfFeatures, elfFeatures, halflingFeatures,  humanFeatures, dragonbornFeatures, gnomeFeatures, halfElfFeatures, halfOrcFeatures, tieflingFeatures];
+var hillFeatures = 'max hp +1 for every level';
+var mountainFeatures = '';
+var highFeatures = '';
+var woodFeatures = 'can hide lightly when obscured by nature'; 
+var darkFeatures = 'when in direct sunlight, disadvantage on perception';
+var lightfootFeatures = 'can be lightly obscured by a creature bigger than you';
+var stoutFeatures = 'adv on saving throws vs poison, resistance to poison'; 
+var blackFeatures = 'resistance to acid, breath weapon: acid 5x30 line (dex save)'; 
+var blueFeatures = 'resistance to lighting, breath weapon: lightning 5x30 line (dex save)'
+var brassFeatures = 'resistance to fire, breath weapon: fire 5x30 line (dex save'; 
+var bronzeFeatures = 'resistance to lightning, breath weapon: lightning 5x30 line (dex save)'; 
+var copperFeatures = 'resistance to acid, breath weapon: acid 5x30 line (dex save)';
+var goldFeatures = 'resistance to fire, breath weapon: fire 15 foot cone (dex save)';
+var greenFeatures = 'resistance to poison, breath weapon: poison 15 foot cone (con save)';
+var redFeatures = 'resistance to fire, breath weapon: fire 15 foot cone (dex save)'
+var silverFeatures = 'resistance to cold, breath weapon: cold 15 foot cone';
+var whiteFeatures = 'resistance tocold, breath weapon: cold 15 foot cone';
+var forestFeatures = 'can speak with small beasts and understand them'; 
+var rockFeatures = 'history checks on maic items, alchemical objects, or technological devices + proficiency*2';
+
+var subraceFeatures = [hillFeatures, mountainFeatures, highFeatures, woodFeatures, darkFeatures, lightfootFeatures, stoutFeatures, blackFeatures, brassFeatures, bronzeFeatures, copperFeatures, goldFeatures, greenFeatures, redFeatures, silverFeatures, whiteFeatures, forestFeatures, rockFeatures];
+// classFeatures = [barbarianFeatures, bardFeatures, clericFeatures, druidFeatures, fighterFeatures, monkFeatures, paladinFeatures, rangerFeatures, rogueFeatures, sorcererFeatures, warlockFeatures, wzardFeatures];
+// //collection of proficiency lists
+// raceSkills =[dwarfskills, elfSkills, halflingSkills, humanSkills, dragonbornSkills, gnomeSkills, halfElfSkills, halfOrcSkills, tieflingSkills];
+// [hillSkills, mountainSkills, highSkills, woodSkills, darkSkills, lightfootSkills, stoutSkills, blackSkills, brassSkills, bronzeSkills, forestSkills, rockSkills];
+// classSkills = [barbarianSkills, bardSkills, clericSkills, druidSkills, fighterSkills, monkSkills, paladinSkills, rangerSkills, rogueSkills, sorcererSkills, warlockSkills, wizardSkills];
 
 //----------------FUNCTION DECLARATIONS----------------
 
@@ -44,35 +96,35 @@ function assignBackgroundHealth() {
         allChars[i].background = backgrounds[8];
         allChars[i].ablPros.push(proficiencies[1], proficiencies[18]);
         allChars[i].hitdie = 'd12';
-        allChars[i].hp = 12;
+        allChars[i].hp = 12 + allChars[i].ablMods[2];
         break;
       case jobs[1]:
         allChars[i].ablPros.push(proficiencies[2], proficiencies[19], proficiencies[23], proficiencies[9], proficiencies[20]);
         allChars[i].background = backgrounds[3];
         allChars[i].ablPros.push(proficiencies[3], proficiencies[22]);
         allChars[i].hitdie = 'd8';
-        allChars[i].hp = 8;
+        allChars[i].hp = 8 + allChars[i].ablMods[2];
         break;
       case jobs[2]:
         allChars[i].ablPros.push(proficiencies[13], proficiencies[19], proficiencies[16], proficiencies[23]);
         allChars[i].background = backgrounds[0];
         allChars[i].ablPros.push(proficiencies[15], proficiencies[12]);
         allChars[i].hitdie = 'd8';
-        allChars[i].hp = 8;
+        allChars[i].hp = 8 + allChars[i].ablMods[2];
         break;
       case jobs[3]:
         allChars[i].ablPros.push(proficiencies[7], proficiencies[13], proficiencies[14], proficiencies[11]);
         allChars[i].background = backgrounds[6];
         allChars[i].ablPros.push(proficiencies[16], proficiencies[12]);
         allChars[i].hitdie = 'd8';
-        allChars[i].hp = 8;
+        allChars[i].hp = 8 + allChars[i].ablMods[2];
         break;
       case jobs[4]:
         allChars[i].ablPros.push(proficiencies[0], proficiencies[6], proficiencies[15], proficiencies[18]);
         allChars[i].background = backgrounds[11];
         allChars[i].ablPros.push(proficiencies[1], proficiencies[21]);
         allChars[i].hitdie = 'd10';
-        allChars[i].hp = 10;
+        allChars[i].hp = 10 + allChars[i].ablMods[2];
         break;
       case jobs[5]:
         allChars[i].ablPros.push(proficiencies[0], proficiencies[2], proficiencies[3], proficiencies[5]);
@@ -86,42 +138,42 @@ function assignBackgroundHealth() {
         allChars[i].background = backgrounds[4];
         allChars[i].ablPros.push(proficiencies[14], proficiencies[18]);
         allChars[i].hitdie = 'd10';
-        allChars[i].hp = 10;
+        allChars[i].hp = 10 + allChars[i].ablMods[2];
         break;
       case jobs[7]:
         allChars[i].ablPros.push(proficiencies[0], proficiencies[6], proficiencies[14], proficiencies[11], proficiencies[5]);
         allChars[i].background = backgrounds[8];
         allChars[i].ablPros.push(proficiencies[1], proficiencies[18]);
         allChars[i].hitdie = 'd10';
-        allChars[i].hp = 10;
+        allChars[i].hp = 10 + allChars[i].ablMods[2];
         break;
       case jobs[8]:
         allChars[i].ablPros.push(proficiencies[2], proficiencies[7], proficiencies[4], proficiencies[3], proficiencies[23], proficiencies[22]);
         allChars[i].background = backgrounds[2];
         allChars[i].ablPros.push(proficiencies[20], proficiencies[5]);
         allChars[i].hitdie = 'd8';
-        allChars[i].hp = 8;
+        allChars[i].hp = 8 + allChars[i].ablMods[2];
         break;
       case jobs[9]:
         allChars[i].ablPros.push(proficiencies[19], proficiencies[6], proficiencies[15], proficiencies[12]);
         allChars[i].background = backgrounds[9];
         allChars[i].ablPros.push(proficiencies[8], proficiencies[9]);
         allChars[i].hitdie = 'd6';
-        allChars[i].hp = 6;
+        allChars[i].hp = 6 + allChars[i].ablMods[2];
         break;
       case jobs[10]:
         allChars[i].ablPros.push(proficiencies[13], proficiencies[19], proficiencies[21], proficiencies[8]);
         allChars[i].background = backgrounds[1];
         allChars[i].ablPros.push(proficiencies[20], proficiencies[4]);
         allChars[i].hitdie = 'd8';
-        allChars[i].hp = 8;
+        allChars[i].hp = 8 + allChars[i].ablMods[2];
         break;
       case jobs[11]:
         allChars[i].ablPros.push(proficiencies[7], proficiencies[13], proficiencies[9], proficiencies[8]);
         allChars[i].background = backgrounds[5];
         allChars[i].ablPros.push(proficiencies[15], proficiencies[23]);
         allChars[i].hitdie = 'd6';
-        allChars[i].hp = 6;
+        allChars[i].hp = 6 + allChars[i].ablMods[2];
         break;
     }
   }
@@ -253,14 +305,84 @@ function calcAblMods() {
   }
 }
 
-//calculates proficiency modifiers: UNFINISHED
-// function calcProMods() {
-//   for (var i = 0; i < allChars.length; i++) {
-//     for (var e = 0; e < ablPros.length; e++) {
-//       switch()
-//     }
-//   }
-// }
+//calculates proficiency modifiers
+function calcProMods() {
+  for (var i = 0; i < allChars.length; i++) {
+    var e = 0;
+    while (e < 2) {
+      allChars[i].proMods.push(allChars[i].ablMods[0]);
+      e++;
+    }
+    while (e < 6) {
+      allChars[i].proMods.push(allChars[i].ablMods[1]);
+      e++;
+    }
+    while (e < 7) {
+      allChars[i].proMods.push(allChars[i].ablMods[2]);
+      e++;
+    }
+    while (e < 13) {
+      allChars[i].proMods.push(allChars[i].ablMods[3]);
+      e++;
+    }
+    while (e < 19) {
+      allChars[i].proMods.push(allChars[i].ablMods[4]);
+      e++;
+    }
+    while (e < 24) {
+      allChars[i].proMods.push(allChars[i].ablMods[5]);
+      e++;
+    }
+    for (var a = 0; a < allChars[i].ablPros.length; a++) {
+      for (var u = 0; u < proficiencies.length; u++) {
+        if (allChars[i].ablPros[a] === proficiencies[u]) {
+          allChars[i].proMods[u] += 2;
+          console.log('incremented');
+        }
+      }
+    }
+    if (allChars[i].job === jobs[8]) {
+      allChars[i].proMods[4] += 2;
+      allChars[i].proMods[5] += 2;
+    }
+  }
+}
+
+//Shows the corresponding descriptions of races and roles
+var race = document.getElementById('race');
+function handleRaceChange(event){
+  for (var i = 0; i < races.length; i++) {
+    if (event.target.value === races[i].toLowerCase()) {
+      for (var i = 0; i < subraceEl.length; i++) {
+        subraceEl[i].style.display = "none";
+      }
+      var subrace = document.getElementById(event.target.value);
+      subrace.style.display = "block";
+    }
+  }
+}
+
+var role = document.getElementById('role');
+function handleRoleChange(event){
+  for (var i = 0; i < jobs.length; i++) {
+    if (event.target.value === jobs[i].toLowerCase()) {
+      for (var i = 0; i < subjobEl.length; i++) {
+        subjobEl[i].style.display = "none";
+      }
+      var subjob = document.getElementById(event.target.value);
+      subjob.style.display = "block";
+    }
+  }
+}
+
+//Submit form and create character: INCOMPLETE
+var button = document.querySelector('button');
+function handleSubmit(){
+  var choices = document.querySelectorAll('input:checked');
+  console.log(choices[0].value, choices[1].value);
+  new Character('stand-in username', choices[0].value, 'stand-in subrace', choices[1].value);
+  console.log(allChars);
+}
 
 //----------------FUNCTION INVOCATIONS----------------
 
@@ -268,13 +390,24 @@ new Character('Harry', 'Tiefling', '', 'Wizard');
 new Character('Aaron', 'Half-Orc', '', 'Fighter');
 new Character('Leo', 'Dragonborn', 'White', 'Rogue');
 new Character('Elizabeth', 'Elf', 'Dark Elf (Drow)', 'Cleric');
-assignBackgroundHealth();
 assignAblScores();
 calcAblMods();
+calcProMods();
+assignBackgroundHealth();
+
 console.log(allChars);
 
 //hides subraces on page load
-var sub = document.getElementsByClassName('sub');
-for (var i = 0; i < sub.length; i++) {
-  sub[i].style.display = 'none';
+var subraceEl = document.querySelectorAll("#subraces .sub");
+var subjobEl = document.querySelectorAll("#subjobs .sub")
+
+for (var i = 0; i < subraceEl.length; i++) {
+  subraceEl[i].style.display = "none";
 }
+for (var i = 0; i < subjobEl.length; i++) {
+  subjobEl[i].style.display = "none";
+}
+
+race.addEventListener("click", handleRaceChange);
+role.addEventListener("click", handleRoleChange);
+button.addEventListener("click", handleSubmit);

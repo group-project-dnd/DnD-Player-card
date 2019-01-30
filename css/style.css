@@ -1,40 +1,44 @@
 header {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 body { 
 background-image: url("../images/DwarfTheme.jpg");  
 background-repeat: no-repeat;
-background-size: 100% 100%;
+background-size: 100%;
+font-family: sans-serif;
 /* color: #ff0000; */
 }
 
-section.race {
-  display: inline-block;
-  position: relative;
+content>section {
   border: 2px solid black;
+  padding-top: 10px;
   width: 15vw;
-  height:550px;
-  margin-right: 2vw;
-  margin-left: 3vw;
-  font-size: 30px;
-  background: rgba(255, 255, 255, 0.5)
+  height:450px;
+  font-size: 23px;
+  background: rgba(255, 255, 255, 0.5);
+  display: inline-block;
 }
 
-.race li {
+input[type=radio] {
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+#race {
+  position: relative;
+  margin-left: 3vw;
+}
+
+#race li {
   margin: 10px;
 }
 
-section.role{
-  display: inline-block;
-  border: 2px solid black; 
-  width: 13vw;
-  height: 550px;
-  font-size: 30px;
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.role li {
+#role li {
   margin: 10px;
 }
 
@@ -44,35 +48,48 @@ body{
 content{
   width: 90vw;
   display:block;
-  height: 750px;
+  height: 100%;
 }
 aside{
   border: solid;
-  margin-top: 20px;
+  margin-top: 50px;
+  padding-top: 10px;
   width: 800px;
   background:rgba(255, 255, 255, 0.5);
-  font-size: 20px;
-  height:650px;
+  font-size: 18px;
+  height:350px;
 }
+aside p:first-of-type {
+  margin: 0px 10px;
+  padding: 15px;
+  border-bottom: dotted 3px grey;
+}
+h4 {
+  font-size: 20px;
+  margin: 0px 10px;
+  padding: 15px 15px 0 15px;
+}
+
 #subraces{
   float: left;
-  width: 20vw
+  width: 26vw;
+  overflow: auto;
 }
 #subjobs  {
   float: right;
-  width: 32vw;
+  width: 26vw;
+  overflow: auto;
 }
 button{
-  position: absolute;
-  top: 700px;
-  left: 35%;
-  width: 250px;
-  height: 75px;
+  margin: 10px 30vw;
+  width: 30vw;
+  height: 8vw;
   background-image: url("../images/buttonImg.jpg");
   background-size: 100% 100%;
   border: none;
   color: rgb(204, 199, 199);
   font-size: 25px;
+  cursor: pointer;
 }
 
 #characterName {
