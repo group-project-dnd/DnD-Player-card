@@ -1,0 +1,55 @@
+body {
+  background-image: url("../images/Frontpageimg.jpg");  
+  background-size: 50%;
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+  background-color: black;
+  filter: brightness(100%);
+}
+
+h2{
+  margin: 20px 0;
+  color: whitesmoke;
+  text-align: center;
+  font-family: "MedievalSharp";
+  font-size: 60px;
+  text-shadow: 2px -2px black;
+}
+
+h1 {
+  color: whitesmoke;
+  text-shadow: 2px -2px black;
+  font-family: "MedievalSharp";
+  text-align: center;
+  font-size: 30px;
+}
+
+header img {
+  width: 70px;
+  display: block;
+  margin: 0 auto;
+  filter: invert(1)
+}
+
+form {
+  width: 350px;
+  text-align: center;
+  margin: 200px auto 0;
+}
+input {
+  width: 80px;
+  display: block;
+  margin: 10px auto;
+  font-family: "Raleway";
+  font-size: 20px;
+}
+#username {
+  display: inline-block;
+  width: 200px;
+  font-size: 16px;
+  margin-right: 0;
+}
+#submit {
+  display: inline-block;
+  width: 40px;
+}
