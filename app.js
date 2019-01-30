@@ -61,6 +61,7 @@ var subraceFeatures = [hillFeatures, mountainFeatures, highFeatures, woodFeature
 // raceSkills =[dwarfskills, elfSkills, halflingSkills, humanSkills, dragonbornSkills, gnomeSkills, halfElfSkills, halfOrcSkills, tieflingSkills];
 // [hillSkills, mountainSkills, highSkills, woodSkills, darkSkills, lightfootSkills, stoutSkills, blackSkills, brassSkills, bronzeSkills, forestSkills, rockSkills];
 // classSkills = [barbarianSkills, bardSkills, clericSkills, druidSkills, fighterSkills, monkSkills, paladinSkills, rangerSkills, rogueSkills, sorcererSkills, warlockSkills, wizardSkills];
+
 //----------------FUNCTION DECLARATIONS----------------
 
 function Character(name, race, subrace, job) {
