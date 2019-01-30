@@ -253,14 +253,48 @@ function calcAblMods() {
   }
 }
 
-//calculates proficiency modifiers: UNFINISHED
-// function calcProMods() {
-//   for (var i = 0; i < allChars.length; i++) {
-//     for (var e = 0; e < ablPros.length; e++) {
-//       switch()
-//     }
-//   }
-// }
+//calculates proficiency modifiers
+function calcProMods() {
+  for (var i = 0; i < allChars.length; i++) {
+    var e = 0;
+    while (e < 2) {
+      allChars[i].proMods.push(allChars[i].ablMods[0]);
+      e++;
+    }
+    while (e < 6) {
+      allChars[i].proMods.push(allChars[i].ablMods[1]);
+      e++;
+    }
+    while (e < 7) {
+      allChars[i].proMods.push(allChars[i].ablMods[2]);
+      e++;
+    }
+    while (e < 13) {
+      allChars[i].proMods.push(allChars[i].ablMods[3]);
+      e++;
+    }
+    while (e < 19) {
+      allChars[i].proMods.push(allChars[i].ablMods[4]);
+      e++;
+    }
+    while (e < 24) {
+      allChars[i].proMods.push(allChars[i].ablMods[5]);
+      e++;
+    }
+    for (var a = 0; a < allChars[i].ablPros.length; a++) {
+      for (var u = 0; u < proficiencies.length; u++) {
+        if (allChars[i].ablPros[a] === proficiencies[u]) {
+          allChars[i].proMods[u] += 2;
+          console.log('incremented');
+        }
+      }
+    }
+    if (allChars[i].job === jobs[8]) {
+      allChars[i].proMods[4] += 2;
+      allChars[i].proMods[5] += 2;
+    }
+  }
+}
 
 //----------------FUNCTION INVOCATIONS----------------
 
@@ -271,12 +305,13 @@ new Character('Elizabeth', 'Elf', 'Dark Elf (Drow)', 'Cleric');
 assignBackgroundHealth();
 assignAblScores();
 calcAblMods();
+calcProMods();
 console.log(allChars);
 
 //hides subraces on page load
 var sub = document.getElementsByClassName('sub');
 for (var i = 0; i < sub.length; i++) {
-  sub[i].style.visibility = "hidden";
+  sub[i].style.display = "none";
 }
 
 var race= document.getElementById('race');
@@ -284,11 +319,26 @@ function handleRaceChange(event){
   for (var i = 0; i < races.length; i++) {
     if (event.target.value === races[i].toLowerCase()) {
       for (var i = 0; i < sub.length; i++) {
-        sub[i].style.visibility = "hidden";
+        sub[i].style.display = "none";
       }
       var subrace = document.getElementById(event.target.value);
-      subrace.style.visibility = "visible";
+      subrace.style.display = "block";
     }
   }
 }
-race.addEventListener("click",handleRaceChange);
+
+var role= document.getElementById('role');
+function handleRoleChange(event){
+  for (var i = 0; i < jobs.length; i++) {
+    if (event.target.value === jobs[i].toLowerCase()) {
+      for (var i = 0; i < sub.length; i++) {
+        sub[i].style.display = "none";
+      }
+      var subjob = document.getElementById(event.target.value);
+      subjob.style.display = "block";
+    }
+  }
+}
+
+race.addEventListener("click", handleRaceChange);
+role.addEventListener("click", handleRoleChange);
