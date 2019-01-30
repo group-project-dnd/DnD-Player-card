@@ -9,7 +9,7 @@ background-size: 100% 100%;
 /* color: #ff0000; */
 }
 
-section.race {
+#race {
   display: inline-block;
   position: relative;
   border: 2px solid black;
@@ -21,11 +21,11 @@ section.race {
   background: rgba(255, 255, 255, 0.5)
 }
 
-.race li {
+#race li {
   margin: 10px;
 }
 
-section.role{
+#role{
   display: inline-block;
   border: 2px solid black; 
   width: 13vw;
@@ -34,7 +34,7 @@ section.role{
   background: rgba(255, 255, 255, 0.5);
 }
 
-.role li {
+#role li {
   margin: 10px;
 }
 
