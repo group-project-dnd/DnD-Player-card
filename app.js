@@ -56,10 +56,80 @@ var forestFeatures = 'can speak with small beasts and understand them';
 var rockFeatures = 'history checks on maic items, alchemical objects, or technological devices + proficiency*2';
 
 var subraceFeatures = [hillFeatures, mountainFeatures, highFeatures, woodFeatures, darkFeatures, lightfootFeatures, stoutFeatures, blackFeatures, brassFeatures, bronzeFeatures, copperFeatures, goldFeatures, greenFeatures, redFeatures, silverFeatures, whiteFeatures, forestFeatures, rockFeatures];
-// classFeatures = [barbarianFeatures, bardFeatures, clericFeatures, druidFeatures, fighterFeatures, monkFeatures, paladinFeatures, rangerFeatures, rogueFeatures, sorcererFeatures, warlockFeatures, wzardFeatures];
+
+var barbarianFeatures = [`Rage: Enter a rage as a bonus action and gain the following benefits if you aren’t wearing heavy armor: You have advantage on Strength checks and Strength saving throws. When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table. You have resistance to bludgeoning, piercing, and slashing damage.` , `Unarmored Defense: While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.` , `Wanderer - You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you. In addition, you can find food and fresh water for yourself and up to five other people each day, provided that the land offers berries, small game, water, etc.`];
+
+var bardFeatures = [`Bardic Inspiration: With words or music you may use a bonus action to inspire one creature within 60 feet and give an additional 1d6 to one of their d20 rolls. That creature gains one Bardic Inspiration die, a d6.` , `-By Popular Demand - You can always find somewhere to preform, which will usually give you free lodging and food as long as you preform each night, but be careful, you may become a public figure.` , `-Ritual Casting: you may cast your spells with the ritual tag as a ritual`];
+
+var clericFeatures = [`Shelter of the Faithful - Temples/shrines/clerics that share yoru faith will provide modest services for your party, and will support you at a modest lifestyle.` , `-Ritual Casting: you may cast your spells with the ritual tag as a ritual`];
+
+var druidFeatures = [`-Discovery In your hermitage you had a powerful discovery about the cosmos, dieties, or other powerful beings.Work with your DM to determine the details.` , `-Ritual Casting: you may cast your spells with the ritual tag as a ritual`];
+
+var fighterFeatures = [`-Second Wind- Once per short rest, on your turn use a bonus action to regain 1d10 + level hit points.` , `-Defensive fighting style (+1 ac with armor)` , `-Military Rank- Soldiers loyal to your former organization still recognize your rank and help you accordingly.`];
+
+var monkFeatures = [`-Unarmored Defense - Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier.` , `-Martial Arts - Your unarmed attacks can use dexterity start at 1d4 damage, and when you make an attack, you may make an unarmed attack as a bonus action.` , `-Shelter of the Faithful - Temples/shrines/clerics that share yoru faith will provide modest services for your party, and will support you at a modest lifestyle.`];
+
+var paladinFeatures = [`Divine Sense- 1 + Charisma modifier times per day, open your awareness to detect the location and type of celestial, fiend or undead within 60 feet.` , `-Lay On Hands- You an touch someone, and heal their ailments. You heal an amount equal to your paladin level * 5 per day, or remove a disease per paladin level per day.` , `-Rustic Hospitality - Since you come from the ranks of the common folk, you fit in among them and can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a danger to them unless it puts them in danger.`];
+
+var rangerFeatures = [`Favored terrain- Forest-in the forest, you are unimpeded by difficult terrain, will not get lost, can travel stealthily at a normal pace, can forage twice as much food, can track creatures and know their numbers.` , `-Favored Enemy- beasts and oozes - you have adv on survial checks to track them, and learn a language they speak, if they speak at all (they do not speak language).` , `-Wanderer: You have an excellent head for maps and geography, recalling layout, and are capable of providing food and fresh water for yourself and 5 others if the land has it.`];
+
+var rogueFeatures = [`Sneak attack - Once per turn, you may deal an extra 1d6 to one creature you hit with an attack if you have advantage on that roll, or if an enemy is within 5 feed of it, isn’t incapacitated and you do not have disadvantage on your attack. The attack must be finesse or ranged` , `-Expertise - Two skills you are proficient with get double your proficiency (chosen stealth and sleight of hand)` , `-Criminal Contact - You have a trustworthy reliable contact that acts as a liason to a network of criminals, and will help get messages to other criminals.`];
+
+var sorcererFeatures = [`Green Draconic Ancestory - Resistance poison damage.` , `-Researcher - when attempting to recall or learn lore, if you don’t know it, you know where to find it.` , `-Draconic Resilience - Your health increases by 1 for each level and your base AC is 13 without armor.`];
+
+var warlockFeatures = [`Your Spells recover at short rests instead of long rests.` , `For this class, the following optimizations have been` , `- False Identity - You have a second Identity with documentation, acquaintances and disguises.` , `-Fiend Patron, Dark One’s Blessing - when you reduce an enemy to 0hp, you gain temporary hp equal to your charisma modifier + Warlock level.`];
+
+var wizardFeatures = [`Arcane Recovery - Once per day when you finish a short rest, you can choose expended spell slots equal to half your wizard level rounded up to recover.` , `-Guild Membership- If you pay dues of 5gp per month, guild members of your guild will help provide food, lodging, support you when needed within reason, or even pay for your funeral.` , `-Ritual Casting: you may cast your spells with the ritual tag as a ritual`];
+
+// classFeatures = [barbarianFeatures, bardFeatures, clericFeatures, druidFeatures, fighterFeatures, monkFeatures, paladinFeatures, rangerFeatures, rogueFeatures, sorcererFeatures, warlockFeatures, wizardFeatures];
 // //collection of proficiency lists
+
+var dwarfskills = [`Handaxe, Battleaxe, throwing hammer, smith’s tools, common, dwarfish`]
+var elfSkills = [`Perception, Common, Elvish`]
+var halflingSkills = [`Common, Halfling,`]
+var humanSkills = [`Common, Dwarvish`]
+var dragonbornSkills = [`Common, Draconic`]
+var gnomeSkills = [`Common, Gnomish`]
+var halfElfSkills = [`Perception, Investigation, common, elvish, primordial.`]
+var halfOrcSkills = [`Common, Orc`]
+var tieflingSkills = [`Common and Infernal.`]
+
+ 
 // raceSkills =[dwarfskills, elfSkills, halflingSkills, humanSkills, dragonbornSkills, gnomeSkills, halfElfSkills, halfOrcSkills, tieflingSkills];
-// [hillSkills, mountainSkills, highSkills, woodSkills, darkSkills, lightfootSkills, stoutSkills, blackSkills, brassSkills, bronzeSkills, forestSkills, rockSkills];
+
+var hillSkills = [``]
+var mountainSkills = [`Light Armor, Medium Armor`]
+var highSkills = [`shortbow, shortsword, longsword, longbow`]
+var  woodSkills = [`short bow, shortsword, longsword, longbow`]
+var darkSkills = [`rapiers, shortswords and hand crossbows`]
+var lightfootSkills = [``]
+var stoutSkills = [``]
+var blackSkills = [``]
+var brassSkills = [``]
+var bronzeSkills = [``]
+var forestSkills = [``]
+var rockSkills = [``]
+
+// var subraceSkills =[hillSkills, mountainSkills, highSkills, woodSkills, darkSkills, lightfootSkills, stoutSkills, blackSkills, brassSkills, bronzeSkills, forestSkills, rockSkills];
+
+var barbarianSkills = `Light Armor, Medium Armor, Shields, Simple Weapons, Martial Weapons, Strength Saving Throw, Constitution Saving Throw, Animal Handling, Nature, Athletics, Survival, Hand Drum, Sylvan`;
+
+var bardSkills =  `Light Armor, Simple Weapons, hand crossbows, longswords, rapiers, Shortswords, Dexterity Saving Throw, Charisma Saving Throw, Persuasion, History, Deception, Acrobatics, Preformance, Lyre, Lute, Flute, Hand Drum, Disguise kit.`;
+
+var clericSkills = `Heavy Armor, Light Armor, Medium Armor, Shields, All Simple Weapons, Wisdom Saving Throw, Charisma Saving Throw, Medicine, Persuasion, Insight, Religion`;
+
+var druidSkills = `Light Armor, Medium Armor, Shields, Clubs, Daggers, Darts, Javelins, Maces, Quarterstaffs, Scimitars, Sickles, Slings, Spears, Herbalism Kit, Druidic, Intelligence Saving Throw, Wisdom Saving Throw, Medicine, Animal Handling, Nature, Religion, Sylvan, Celestial`;
+
+var fighterSkills = `All Armor, Shields, All Simple Weapons, Martial Weapons, Strength Saving Throw, Constitution Saving Throw, Insight, Survival, Athletics, Intimidation,  Dragonchess`;
+
+var monkSkills = `Simple Weapons, Shortswords, Strength Saving throw Dexterity Saving Throw, Insight, Religion, Stealth, Acrobatics, Celestial, Druidic`;
+var paladinSkills = `All Armor, Shields, All simple weapons, martial weapons, Wisdom Saving Throw, Charisma Saving Throw,Animal Handling, Survival,Athletics, Religion, Woodcarver’s Tools, Land Vehicles.`;
+var rangerSkills = `Light Armor, Medium Armor, shieds, Simple weapons, Martial Weapons, Strength Saving Throw, Dexterity Saving Throw, Stealth, Animal Handling, Nature, Athletics, Survival, Flute`;
+var rogueSkills = `Light Armor, Simple Weapons, Hand Crossbows, Longswords, Rapiers, Shortswords, Theives’ tools, Dexterity Saving Throw, Intelligence Saving Throws, Stealth, Sleight of Hand, Acrobatics, Persuasion, Investigation, Deception.`;
+var sorcererSkills = `Daggers, Darts, Slings, Quarterstaffs, Light Crossbows, Constitution Saving Throw, Charisma Savin Throw, Draconic, Celestial Druidic, Arcana, Insight, Acrobatics, History, Religion`;
+var warlockSkills = `Light Armor, Simple Weapons, Wisdom Saving Throw, Charisma Saving Throw, Intimidation, Arcana, Deception, Sleight of Hand, Disguise, Kit Forgery Kit`;
+var wizardSkills = `Daggers, Darts, Slings, Quarterstaffs, Light Crossbows, Wisdom Saving Throw, Intelligence Saving Throw, Insight, Persuasion, Arcana, History, Druidic, Scribe’s tools`;
+
 // classSkills = [barbarianSkills, bardSkills, clericSkills, druidSkills, fighterSkills, monkSkills, paladinSkills, rangerSkills, rogueSkills, sorcererSkills, warlockSkills, wizardSkills];
 
 //----------------FUNCTION DECLARATIONS----------------
