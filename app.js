@@ -296,6 +296,42 @@ function calcProMods() {
   }
 }
 
+//Shows the corresponding descriptions of races and roles
+var race = document.getElementById('race');
+function handleRaceChange(event){
+  for (var i = 0; i < races.length; i++) {
+    if (event.target.value === races[i].toLowerCase()) {
+      for (var i = 0; i < subraceEl.length; i++) {
+        subraceEl[i].style.display = "none";
+      }
+      var subrace = document.getElementById(event.target.value);
+      subrace.style.display = "block";
+    }
+  }
+}
+
+var role = document.getElementById('role');
+function handleRoleChange(event){
+  for (var i = 0; i < jobs.length; i++) {
+    if (event.target.value === jobs[i].toLowerCase()) {
+      for (var i = 0; i < subjobEl.length; i++) {
+        subjobEl[i].style.display = "none";
+      }
+      var subjob = document.getElementById(event.target.value);
+      subjob.style.display = "block";
+    }
+  }
+}
+
+//Submit form and create character: INCOMPLETE
+var button = document.querySelector('button');
+function handleSubmit(){
+  var choices = document.querySelectorAll('input:checked');
+  console.log(choices[0].value, choices[1].value);
+  new Character('stand-in username', choices[0].value, 'stand-in subrace', choices[1].value);
+  console.log(allChars);
+}
+
 //----------------FUNCTION INVOCATIONS----------------
 
 new Character('Harry', 'Tiefling', '', 'Wizard');
@@ -309,36 +345,16 @@ calcProMods();
 console.log(allChars);
 
 //hides subraces on page load
-var sub = document.getElementsByClassName('sub');
-for (var i = 0; i < sub.length; i++) {
-  sub[i].style.display = "none";
-}
+var subraceEl = document.querySelectorAll("#subraces .sub");
+var subjobEl = document.querySelectorAll("#subjobs .sub")
 
-var race= document.getElementById('race');
-function handleRaceChange(event){
-  for (var i = 0; i < races.length; i++) {
-    if (event.target.value === races[i].toLowerCase()) {
-      for (var i = 0; i < sub.length; i++) {
-        sub[i].style.display = "none";
-      }
-      var subrace = document.getElementById(event.target.value);
-      subrace.style.display = "block";
-    }
-  }
+for (var i = 0; i < subraceEl.length; i++) {
+  subraceEl[i].style.display = "none";
 }
-
-var role= document.getElementById('role');
-function handleRoleChange(event){
-  for (var i = 0; i < jobs.length; i++) {
-    if (event.target.value === jobs[i].toLowerCase()) {
-      for (var i = 0; i < sub.length; i++) {
-        sub[i].style.display = "none";
-      }
-      var subjob = document.getElementById(event.target.value);
-      subjob.style.display = "block";
-    }
-  }
+for (var i = 0; i < subjobEl.length; i++) {
+  subjobEl[i].style.display = "none";
 }
 
 race.addEventListener("click", handleRaceChange);
 role.addEventListener("click", handleRoleChange);
+button.addEventListener("click", handleSubmit);
