@@ -1,0 +1,112 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  padding: 50px;
+  border: 1px solid silver;
+  width: 850px;
+  height: 1100px;
+  margin: 20px auto;
+}
+
+p {
+  font-size: 18px;
+  font-family: "Homemade Apple", cursive;
+  height: 20px;
+}
+
+/* HEADER */
+
+header {
+  font-size: 14px;
+  margin-bottom: 15px;
+  width: 850px;
+  height: 175px;
+}
+header nav li {
+  float: right;
+  margin-right: 15px;
+  padding: 3px 8px;
+  background-color: darkred;
+  border: 2px outset darkred;
+  border-radius: 0 0 10px 10px;
+}
+a {
+  color: white;
+  font-family: monospace;
+  text-shadow: -1px -1px rgb(70, 0, 0);
+  font-weight: bold;
+  text-decoration: none;
+}
+header img {
+  float:left;
+  width: 150px;
+  margin-left: 25px;
+}
+h1 {
+  font-family: "MedievalSharp";
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: black underline;
+}
+#name {
+  position: absolute;
+  top: 135px;
+  width: 325px;
+  background-color: white;
+  border: 5px double black;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-radius: 10px;
+  padding: 5px;
+}
+#name p {
+  height: 20px;
+  margin: 5px 10px;
+  text-align: center;
+}
+header table {
+  position: relative;
+  left: 165px;
+  top: 25px;
+  width: 500px;
+  height: 100px;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+header td {
+  padding-left: 5px;
+  width: 166px;
+  border: 1px silver solid;
+}
+header td p {
+  height: 20px;
+  text-align: right;
+  margin-top: 10px;
+}
+
+/* STATBLOCK */
+main>div {
+  display: inline-block;
+  width: 263px;
+  background-color: silver;
+  border: 5px outset silver;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+#statblock, #health, #proLang, #eqpmtCharNotes {
+  float: left;
+  margin-right: 15px;
+}
+#health, #atkSpell {
+  height: 400px;
+}
+#proLang, #eqpmtCharNotes {
+  height: 200px;
+}
+#features {
+  height: 425px;
+}
+#statblock {
+  height: 850px;
+}
