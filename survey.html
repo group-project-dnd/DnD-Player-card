@@ -14,7 +14,7 @@
   </header>
   <content>
     <p>Character Name <input type="text" name="charName"></p>
-    <section class=race>
+    <section id=race>
       <h2>Race</h2>
       <ul>
         <li><input type="radio" name="race" value="dwarf"> Dwarf</li>
@@ -29,7 +29,7 @@
 
       </ul>
     </section>
-    <section class="role">
+    <section id="role">
       <h2>Class</h2>
       <ul>
         <li><input type="radio" name="job" value="barbarian"> Barbarian</li>
@@ -185,8 +185,8 @@
         <p>Hit Dice: 1d12 per barbarian level. Hit Points at 1st Level: 12 + your Constitution modifier. </p>
         Proficiencies: Armor: Light armor, medium armor, shields. Weapons: Simple weapons, martial weapons. Saving
         Throws: Strength, Constitution. </p>
-        Rage: In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While
-        raging, you gain the following benefits if you aren’twearing heavy armor: You have advantage on Strength checks
+        Rage: Enter a rage as a bonus action and gain the following benefits if you aren’t wearing heavy armor: You
+        have advantage on Strength checks
         and Strength saving throws. When you make a melee weapon attack using Strength, you gain a bonus to the damage
         roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian
         table. You have resistance to bludgeoning, piercing, and slashing damage.</p>
@@ -224,7 +224,7 @@
         <p> Spells: Cantrips- Vicious Mockery, Mending. Spells known- Comprehend Languages, Cure Wounds, Detect Magic,
           Dissonant Whispers. 2*level 1 spell slot.</p>
       </section>
-      <section id=Cleric class=sub>
+      <section id=cleric class=sub>
         <h4>Cleric</h4>
         <p> Clerics are adventurers that gain their magical prowess from the divine. Praying to the gods, they can fill
           a number of roles, but are best known for healing and combatting the unholy.</p>
@@ -238,38 +238,89 @@
           Sylvan and Celestial. Equipment: Mace, Chainmail, light crossbow, 20 bolts, sheild, holy symbol * 2,
           backpack, a blanket, 10 candles, a tinderbox, an alms box, 2 blocks of incense, a censer, vestments, 2 days
           of rations, a waterskin, a prayer book or prayer wheel, 5 sticks of incense, vestments, a set of common
-          clothes, and a belt pouch containing 15 gp</p>
+          clothes, and a belt pouch containing 15 gp. Feature: Shelter of the Faithful - Temples/shrines/clerics that
+          share yoru faith will provide modest services for your party, and will support you at a modest lifestyle.</p>
         <p> Spells: Cantrips- Sacred Flame, Spare the Dying, Guidance. Spells known- Cure Wounds, Detect Magic, Sheild
           of Faith. 2*level 1 spell slot.</p>
       </section>
-      <section id=Druid class=sub>
+      <section id=druid class=sub>
         <h4>Druid</h4>
-        <p> Druids are magic users that harness the power of nature. Often living in harmony with nature, at later levels they have the ability to shapeshift into beasts.</p>
+        <p> Druids are magic users that harness the power of nature. Often living in harmony with nature, at later
+          levels they have the ability to shapeshift into beasts.</p>
         <p>As a druid, the following are features of your class at level 1:</p>
         <p>Hit Dice: 1d8. Hit points at 1st level: 8 + your Constitution modifier. </p>
-        <p>Proficiencies: Armor: Light armor, medium armor, shields. Weapons: Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings,spears. Tools: Herbalism Kit. Saving Throws: Intelligence, Wisdom.</p>
+        <p>Proficiencies: Armor: Light armor, medium armor, shields. Weapons: Clubs, daggers, darts, javelins, maces,
+          quarterstaffs, scimitars, sickles, slings,spears. Tools: Herbalism Kit. Languages: Druidic Saving Throws:
+          Intelligence, Wisdom.</p>
         <p> For this class, the following optimizations have been chosen:</p>
-        <p>Hermit background. Stat array: 10 Strength, 12 Dexterity, 14 Constitution, 13 Intelligence, 15 Wisdom, 8 Charisma. Proficiencies: Medicine, Animal Handling, Nature, Religion. Languages: Sylvan, Celestial. Equipment: A wooden shield, a mace, leathre armor, a duidic focus, A scroll case stuffed full of notes from your studies or prayers, a winter blanket, a set of common clothes, an herbalism kit, a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin, 50 feet hemp rope, and 5 gp. Feature: Shelter of the Faithful - Temples/shrines/clerics that share yoru faith will provide modest services for your party, and will support you at a modest lifestyle.</p>
-        <p> Spells: Cantrips- Druidcraft, Shilelagh. Spells known- Cure Wounds, Detect Magic, Farie Fire. 2*level 1 spell slot.</p>
+        <p>Hermit background. Stat array: 10 Strength, 12 Dexterity, 14 Constitution, 13 Intelligence, 15 Wisdom, 8
+          Charisma. Proficiencies: Medicine, Animal Handling, Nature, Religion. Languages: Sylvan, Celestial.
+          Equipment: A wooden shield, a mace, leathre armor, a duidic focus, A scroll case stuffed full of notes from
+          your studies or prayers, a winter blanket, a set of common clothes, an herbalism kit, a backpack, a bedroll,
+          a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin, 50 feet hemp rope, and 5 gp.
+          Feature: Discovery- In your hermitage you had a powerful discovery about the cosmos, dieties, or other
+          powerful beings.Work with your DM to determine the details.</p>
+        <p> Spells: Cantrips- Druidcraft, Shilelagh. Spells known- Cure Wounds, Detect Magic, Farie Fire. 2*level 1
+          spell slot.</p>
       </section>
-      <section id=Fighter class=sub>
+      <section id=fighter class=sub>
         <h4>Fighter</h4>
-        <p> Fighters are adventurers that rely in their martial training to deal with encounters. Choosing to excel in a style of fighting, they come in all varieties, from large weapons users or sword and sheilds, to ranged combat or dexterity based fighting.</p>
+        <p> Fighters are adventurers that rely in their martial training to deal with encounters. Choosing to excel in
+          a style of fighting, they come in all varieties, from large weapons users or sword and sheilds, to ranged
+          combat or dexterity based fighting.</p>
         <p>As a fighter, the following are features of your class at level 1:</p>
         <p>Hit Dice: 1d10. Hit points at 1st level: 10 + your Constitution modifier. </p>
-        <p>Proficiencies: Armor: All armor, sheilds Weapons: All simple weapons, martial weapons. Saving Throws: Strength, Constitution</p> 
+        <p>Proficiencies: Armor: All armor, sheilds Weapons: All simple weapons, martial weapons. Saving Throws:
+          Strength, Constitution</p>
+        <p> Features:Second Wind- Once per short rest, on your turn use a bonus action to regain 1d10 + level hit
+          points.</p>
         <p> For this class, the following optimizations have been chosen:</p>
-        <p>Soldier background. Defensive fighting style (+1 ac with armor). Stat array: 15 Strength, 12 Dexterity, 14 Constitution, 10 Intelligence, 13 Wisdom, 8 Charisma. Proficiencies: Insight, Survival, Athletics, Intimidation. Gaming set: Dragonchess. vehicles(land). Inventory: Chain mail, longsword, sheild, handaxe * 2, a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, a waterskin, 50 feet of hempen rope, an insignia of rank, a trophy taken from an enemy, a set of bone dice, a set of common clothes, and a belt pouch containing 10 gp. Feature: Military Rank- Soldiers loyal to your former organization still recognize your rank.</p>
+        <p>Soldier background. Defensive fighting style (+1 ac with armor). Stat array: 15 Strength, 12 Dexterity, 14
+          Constitution, 10 Intelligence, 13 Wisdom, 8 Charisma. Proficiencies: Insight, Survival, Athletics,
+          Intimidation. Gaming set: Dragonchess. vehicles(land). Inventory: Chain mail, longsword, sheild, handaxe * 2,
+          a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, a waterskin, 50 feet of
+          hempen rope, an insignia of rank, a trophy taken from an enemy, a set of bone dice, a set of common clothes,
+          and a belt pouch containing 10 gp. Feature: Military Rank- Soldiers loyal to your former organization still
+          recognize your rank.</p>
       </section>
-      <section id=Fighter class=sub>
-        <h4>Fighter</h4>
-        <p> Fighters are adventurers that rely in their martial training to deal with encounters. Choosing to excel in a style of fighting, they come in all varieties, from large weapons users or sword and sheilds, to ranged combat or dexterity based fighting.</p>
-        <p>As a fighter, the following are features of your class at level 1:</p>
+      <section id=monk class=sub>
+        <h4>Monk</h4>
+        <p> Monks are adventurers who have gone through rigorous internal training, honing a magical energy commonly
+          called ki. </p>
+        <p>As a monk, the following are features of your class at level 1:</p>
+        <p>Hit Dice: 1d8. Hit points at 1st level: 8 + your Constitution modifier. </p>
+        <p>Proficiencies: Weapons: simple weapons, shortswords. Saving Throws: Strength, Dexterity</p>
+        <p>Features: Unarmored Defense - Beginning at 1st level, while you are wearing no armor and not wielding a
+          shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier. Martial Arts - Your unarmed
+          attacks can use dexterity start at 1d4 damage, and when you make an attack, you may make an unarmed attack as
+          a bonus action.</p>
+        <p> For this class, the following optimizations have been chosen:</p>
+        <p>Acolyte background. Proficiencies: Insight, Religion, Stealth, Acrobatics. Languages: Celestial, Druidic.
+          Inventory: Shortsword, 10 darts, a backpack, a crowbar, a hammer, 10 pitons, 10 torches, a tinderbox, 10 days
+          of rations, and a waterskin, 50 feet of hempen rope, holy symbol, a prayer book or prayer wheel, 5 sticks of
+          incense vestments, a set of common clothes, and a belt pouch containing 15 gp. Feature: Shelter of the
+          Faithful - Temples/shrines/clerics that share yoru faith will provide modest services for your party, and
+          will support you at a modest lifestyle.</p>
+      </section>
+      <section id=paladin class=sub>
+        <h4>Paladin</h4>
+        <p> As warriors that carry the ideals of gods on their shoulders, paladins are forced not only to live up to their ideals and combat forces against, they must follow the callings of their god. In fighting their evil, most take their job seriously with little room for comprimise. </p>
+        <p>As a paladin, the following are features of your class at level 1:</p>
         <p>Hit Dice: 1d10. Hit points at 1st level: 10 + your Constitution modifier. </p>
-        <p>Proficiencies: Armor: All armor, sheilds Weapons: All simple weapons, martial weapons. Saving Throws: Strength, Constitution</p> 
+        <p>Proficiencies: Armor: All armor, sheilds. Weapons: Simple weapons, Martial Weapons. Saving Throws: Wisdom, Charisma</p>
+        <p>Features: Divine Sense- 1 + Charisma modifier times per day, open your awareness to detect  the location and type of celestial, fiend or undead within 60 feet. Lay On Hands- You an touch someone, and heal their ailments. You heal an amount equal to your paladin level * 5 per day, or remove a disease per paladin level per day.</p>
         <p> For this class, the following optimizations have been chosen:</p>
-        <p>Soldier background. Defensive fighting style (+1 ac with armor). Stat array: 15 Strength, 12 Dexterity, 14 Constitution, 10 Intelligence, 13 Wisdom, 8 Charisma. Proficiencies: Insight, Survival, Athletics, Intimidation. Gaming set: Dragonchess. vehicles(land). Inventory: Chain mail, longsword, sheild, handaxe * 2, a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, a waterskin, 50 feet of hempen rope, an insignia of rank, a trophy taken from an enemy, a set of bone dice, a set of common clothes, and a belt pouch containing 10 gp. Feature: Military Rank- Soldiers loyal to your former organization still recognize your rank.</p>
+        <p>Folk Hero background. Proficiencies: Animal Handling, Survival, Athletics, Religion. Tools: Woodcarver's Tools. Land Vehicles. Inventory: Longsword, shield, javelin * 5, chainmail, holy symbol, a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin, 50 feet o f hempen rope,woodcarver's Tools, a shovel, an iron pot, a set of common clothes, and a belt pouch containing 10 gp.Feature: Rustic Hospitality - Since you come from the ranks of the common folk, you fit in among them and can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a danger to them unless it puts them in danger.</p>
       </section>
+      <section id=ranger class=sub>
+          <h4>Fanger</h4>
+          <p> Roaming the wilderness and tracking animals, these warriors are adept and at home when outside civilization. While perhaps lacking the brute force of a barbarian, or the wonders of a magicuser, their rescorcfulness is unparalelled</p>
+          <p>As a paladin, the following are features of your class at level 1:</p>
+          <p>Hit Dice: 1d10. Hit points at 1st level: 10 + your Constitution modifier.</p>
+          <p>Proficiencies: Armor: Light armor, medium armor, sheilds. Weapons: Simple weapons, Martial Weapons. Saving Throws: Strength, Dexterity</p>
+          <p> For this class, the following optimizations have been chosen:</p>
+          <p>Outlander background.  Features: Favored terrain- Forest-in the forest, you are unimpeded by difficult terrain, will not get lost, can travel stealthily at a normal pace, can forage twice as much food, can track creatures and know their numbers. Favored Enemy- beasts and oozes - you have adv on survial checks to track them, and learn a language they speak, if they speak at all. Proficiencies: Animal Handling, Survival, Athletics, Religion. Tools: Woodcarver's Tools. Land Vehicles. Inventory: Longsword, shield, javelin * 5, chainmail, holy symbol, a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin, 50 feet o f hempen rope,woodcarver's Tools, a shovel, an iron pot, a set of common clothes, and a belt pouch containing 10 gp.Feature: Rustic Hospitality - Since you come from the ranks of the common folk, you fit in among them and can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a danger to them unless it puts them in danger.</p>
+        </section>
 
     </aside>
     <button type="button">
