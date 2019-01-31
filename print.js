@@ -25,7 +25,11 @@ document.getElementById('cha').firstElementChild.firstElementChild.innerHTML = c
 document.getElementById('cha').firstElementChild.children[1].innerHTML = chara.ablScores[5];
 var proMods = document.querySelectorAll('li li h2 span');
 for (var i = 0; i < proMods.length; i++) {
-  proMods[i].innerHTML = `+${chara.proMods[i]}`;
+  if (proMods[i] > 0) {
+    proMods[i].innerHTML = `+${chara.proMods[i]}`;
+  } else {
+    proMods[i].innerHTML = chara.proMods[i];
+  }
 }
 var ablPros = document.querySelectorAll('li li h2');
 for (var i = 0; i < chara.ablPros.length; i++) {

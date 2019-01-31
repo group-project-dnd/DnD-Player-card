@@ -350,12 +350,15 @@ function assignAblScores() {
     switch (allChars[i].race) {
       case races[0]:
         allChars[i].ablScores[2] += 2;
+        allChars[i].speed = 25;
         break;
       case races[1]:
         allChars[i].ablScores[1] += 2;
+        allChars[i].speed = 30;
         break;
       case races[2]:
         allChars[i].ablScores[1] += 2;
+        allChars[i].speed = 25;
         break;
       case races[3]:
         allChars[i].ablScores[0]++;
@@ -364,26 +367,32 @@ function assignAblScores() {
         allChars[i].ablScores[3]++;
         allChars[i].ablScores[4]++;
         allChars[i].ablScores[5]++;
+        allChars[i].speed = 30;
         break;
       case races[4]:
         allChars[i].ablScores[0] += 2;
         allChars[i].ablScores[5]++;
+        allChars[i].speed = 30;
         break;
       case races[5]:
         allChars[i].ablScores[3] += 2;
+        allChars[i].speed = 25;
         break;
       case races[6]:
         allChars[i].ablScores[5] += 2;
         allChars[i].ablScores[4]++;
         allChars[i].ablScores[1]++;
+        allChars[i].speed = 30;
         break;
       case races[7]:
         allChars[i].ablScores[0] += 2;
         allChars[i].ablScores[2]++;
+        allChars[i].speed = 30;
         break;
       case races[8]:
         allChars[i].ablScores[5] += 2;
         allChars[i].ablScores[3]++;
+        allChars[i].speed = 30;
         break;
     }
     switch (allChars[i].subrace) {
@@ -459,7 +468,9 @@ function calcProMods() {
       e++;
     }
     for (var a = 0; a < allChars[i].ablPros.length; a++) {
+      console.log('incremented');
       for (var u = 0; u < proficiencies.length; u++) {
+        console.log('incremented');
         if (allChars[i].ablPros[a] === proficiencies[u]) {
           allChars[i].proMods[u] += 2;
           console.log('incremented');
@@ -580,10 +591,10 @@ function handleSubmit(event){
     if (choices[0].value === races[0] || choices[0].value === races[1] || choices[0].value === races[2] || choices[0].value === races[4] || choices[0].value === races[5]) {
       if (choices.length === 3){
         new Character(characterName.value, choices[0].value, choices[2].value, choices[1].value);
+        assignBackgroundHealth();
         assignAblScores();
         calcAblMods();
         calcProMods();
-        assignBackgroundHealth();
         assignMisc();
         console.log(allChars);
         localStorage.newChar = JSON.stringify(allChars);
@@ -593,10 +604,10 @@ function handleSubmit(event){
       }
     } else if (choices.length === 2) {
       new Character(characterName.value, choices[0].value, choices[0].value, choices[1].value);
+      assignBackgroundHealth();
       assignAblScores();
       calcAblMods();
       calcProMods();
-      assignBackgroundHealth();
       assignMisc();
       console.log(allChars);
       localStorage.newChar = JSON.stringify(allChars);
