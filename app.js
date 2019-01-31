@@ -1,4 +1,9 @@
 'use strict';
+
+  var retrievedUser=JSON.parse(localStorage.username);
+  console.log(retrievedUser);
+
+
 //----------------DATA----------------
 
 // var username = prompt('what is your name?');
@@ -499,7 +504,11 @@ function assignMisc() {
 
 //Shows the corresponding descriptions of races and roles
 var race = document.getElementById('race');
+var subRaceSelection = document.getElementsByName('subrace')
 function handleRaceChange(event){
+  for (var i = 0; i<subRaceSelection.length; i++){
+     subRaceSelection[i].checked= false;
+   }
   for (var i = 0; i < races.length; i++) {
     if (event.target.value === races[i].toLowerCase()) {
       for (var i = 0; i < subraceEl.length; i++) {
@@ -535,10 +544,12 @@ function handleSubmit(){
 
 //----------------FUNCTION INVOCATIONS----------------
 
-new Character('Harry', 'Tiefling', '', 'Wizard');
-new Character('Aaron', 'Half-Orc', '', 'Fighter');
-new Character('Leo', 'Dragonborn', 'White', 'Rogue');
-new Character('Elizabeth', 'Elf', 'Dark Elf (Drow)', 'Cleric');
+// new Character('Harry', 'Tiefling', '', 'Wizard');
+// new Character('Aaron', 'Half-Orc', '', 'Fighter');
+// new Character('Leo', 'Dragonborn', 'White', 'Rogue');
+// new Character('Elizabeth', 'Elf', 'Dark Elf (Drow)', 'Cleric');
+
+
 assignAblScores();
 calcAblMods();
 calcProMods();
@@ -561,3 +572,4 @@ for (var i = 0; i < subjobEl.length; i++) {
 race.addEventListener("click", handleRaceChange);
 role.addEventListener("click", handleRoleChange);
 button.addEventListener("click", handleSubmit);
+
