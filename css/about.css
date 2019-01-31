@@ -1,6 +1,6 @@
 body{
     background-image: url("../images/about-page.jpg");  
-    background-size: 110%;
+    background-size: 150%;
     background-position-x: 50%;
     background-repeat: no-repeat;
     background-color: black;
@@ -19,23 +19,29 @@ header img{
 }
 
 ul li img{
-    width:150px;
-    position:absolute;
+    border: 3px groove rgb(168, 89, 15);
+    border-radius: 180px;
+    width:200px;
+    position: absolute;
     transform: rotate(90deg);
-    margin: 20px;
+    margin: 70px 50px 50px 50px;
 }
+
 h2{
-    margin: 20px 0;
     color: whitesmoke;
     text-align: center;
     font-family: "MedievalSharp";
     font-size: 60px;
     text-shadow: 2px -2px black;
+    margin: 0px;
+    padding: 10px;
 }
 p{
-    /* border: 2px dashed green; */
-    color:whitesmoke;
-    margin: 20px 150px;
+    border:4px groove burlywood;
+    color:black;
+    background-color:rgb(204, 199, 199);
+    opacity: 0.73;
+    margin: 10px 250px;
     padding: 10px 20px;
 
 }
@@ -43,4 +49,6 @@ p{
 footer{
     background-color: red;
     color: white;
+    margin-top: 50px;
+    padding: 15px;
 }
