@@ -25,7 +25,11 @@ document.getElementById('cha').firstElementChild.firstElementChild.innerHTML = c
 document.getElementById('cha').firstElementChild.children[1].innerHTML = chara.ablScores[5];
 var proMods = document.querySelectorAll('li li h2 span');
 for (var i = 0; i < proMods.length; i++) {
-  proMods[i].innerHTML = `+${chara.proMods[i]}`;
+  if (chara.proMods[i] > 0) {
+    proMods[i].innerHTML = `+${chara.proMods[i]}`;
+  } else {
+    proMods[i].innerHTML = chara.proMods[i];
+  }
 }
 var ablPros = document.querySelectorAll('li li h2');
 for (var i = 0; i < chara.ablPros.length; i++) {
@@ -38,11 +42,12 @@ for (var i = 0; i < chara.ablPros.length; i++) {
 document.getElementById('passive').firstElementChild.innerHTML = chara.perception;
 document.getElementById('armor').firstElementChild.innerHTML= chara.armClass;
 document.getElementById('init').firstElementChild.innerHTML= chara.initiative;
-document.getElementById('curntHP').firstElementChild.innerHTML= chara.hp;
-document.getElementById('hitDice').firstElementChild.innerHTML= chara.hitdie;
+document.querySelector('#curntHP p:first-of-type').textContent= chara.hp;
+document.querySelector('#hitDice p:first-of-type').textContent= chara.hitdie;
 document.getElementById('proLang').firstElementChild.innerHTML= chara.proLang;
 document.getElementById('eqpmtCharNotes').firstElementChild.innerHTML= chara.inv;
 document.getElementById('features').firstElementChild.innerHTML=chara.feat;
+document.getElementById('speed').firstElementChild.innerHTML=chara.speed;
 
 var spellList = document.getElementById('atkSpell').lastElementChild;
 var cantEl= document.createElement('h5');
