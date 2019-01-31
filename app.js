@@ -186,9 +186,9 @@ function Character(name, race, subrace, job) {
   this.ablMods = [0, 0, 0, 0, 0, 0];
   this.ablPros = [];
   this.proMods = [];
-  this.perception = (10 + this.proMods[17]); //these don't exist yet!!!
-  this.armClass = (10 + this.ablMods[1]);
-  this.initiative = this.ablMods[1];
+  this.perception = 10;
+  this.armClass = 10;
+  this.initiative = 0;
   this.speed = 0;
   this.hp = 0;
   this.hitdie = '';
@@ -209,7 +209,7 @@ function assignBackgroundHealth() {
         allChars[i].background = backgrounds[8];
         allChars[i].ablPros.push(proficiencies[1], proficiencies[18]);
         allChars[i].hitdie = 'd12';
-        allChars[i].hp = 12 + allChars[i].ablMods[2];
+        allChars[i].hp = 12;
         allChars[i].inv = inventoryByClass[0];
         break;
       case jobs[1]:
@@ -217,7 +217,7 @@ function assignBackgroundHealth() {
         allChars[i].background = backgrounds[3];
         allChars[i].ablPros.push(proficiencies[3], proficiencies[22]);
         allChars[i].hitdie = 'd8';
-        allChars[i].hp = 8 + allChars[i].ablMods[2];
+        allChars[i].hp = 8;
         allChars[i].inv = inventoryByClass[1];
         break;
       case jobs[2]:
@@ -225,7 +225,7 @@ function assignBackgroundHealth() {
         allChars[i].background = backgrounds[0];
         allChars[i].ablPros.push(proficiencies[15], proficiencies[12]);
         allChars[i].hitdie = 'd8';
-        allChars[i].hp = 8 + allChars[i].ablMods[2];
+        allChars[i].hp = 8;
         allChars[i].inv = inventoryByClass[2];
         break;
       case jobs[3]:
@@ -233,7 +233,7 @@ function assignBackgroundHealth() {
         allChars[i].background = backgrounds[6];
         allChars[i].ablPros.push(proficiencies[16], proficiencies[12]);
         allChars[i].hitdie = 'd8';
-        allChars[i].hp = 8 + allChars[i].ablMods[2];
+        allChars[i].hp = 8;
         allChars[i].inv = inventoryByClass[3];
         break;
       case jobs[4]:
@@ -241,7 +241,7 @@ function assignBackgroundHealth() {
         allChars[i].background = backgrounds[11];
         allChars[i].ablPros.push(proficiencies[1], proficiencies[21]);
         allChars[i].hitdie = 'd10';
-        allChars[i].hp = 10 + allChars[i].ablMods[2];
+        allChars[i].hp = 10;
         allChars[i].inv = inventoryByClass[4];
         break;
       case jobs[5]:
@@ -249,7 +249,7 @@ function assignBackgroundHealth() {
         allChars[i].background = backgrounds[0];
         allChars[i].ablPros.push(proficiencies[15], proficiencies[12]);
         allChars[i].hitdie = 'd8';
-        allChars[i].hp = 8 + allChars[i].ablMods[2];
+        allChars[i].hp = 8;
         allChars[i].inv = inventoryByClass[5];
         break;
       case jobs[6]:
@@ -257,7 +257,7 @@ function assignBackgroundHealth() {
         allChars[i].background = backgrounds[4];
         allChars[i].ablPros.push(proficiencies[14], proficiencies[18]);
         allChars[i].hitdie = 'd10';
-        allChars[i].hp = 10 + allChars[i].ablMods[2];
+        allChars[i].hp = 10;
         allChars[i].inv = inventoryByClass[6];
         break;
       case jobs[7]:
@@ -265,7 +265,7 @@ function assignBackgroundHealth() {
         allChars[i].background = backgrounds[8];
         allChars[i].ablPros.push(proficiencies[1], proficiencies[18]);
         allChars[i].hitdie = 'd10';
-        allChars[i].hp = 10 + allChars[i].ablMods[2];
+        allChars[i].hp = 10;
         allChars[i].inv = inventoryByClass[7];
         break;
       case jobs[8]:
@@ -273,7 +273,7 @@ function assignBackgroundHealth() {
         allChars[i].background = backgrounds[2];
         allChars[i].ablPros.push(proficiencies[20], proficiencies[5]);
         allChars[i].hitdie = 'd8';
-        allChars[i].hp = 8 + allChars[i].ablMods[2];
+        allChars[i].hp = 8;
         allChars[i].inv = inventoryByClass[8];
         break;
       case jobs[9]:
@@ -281,7 +281,7 @@ function assignBackgroundHealth() {
         allChars[i].background = backgrounds[9];
         allChars[i].ablPros.push(proficiencies[8], proficiencies[9]);
         allChars[i].hitdie = 'd6';
-        allChars[i].hp = 6 + allChars[i].ablMods[2];
+        allChars[i].hp = 6;
         allChars[i].inv = inventoryByClass[9];
         break;
       case jobs[10]:
@@ -289,7 +289,7 @@ function assignBackgroundHealth() {
         allChars[i].background = backgrounds[1];
         allChars[i].ablPros.push(proficiencies[20], proficiencies[4]);
         allChars[i].hitdie = 'd8';
-        allChars[i].hp = 8 + allChars[i].ablMods[2];
+        allChars[i].hp = 8;
         allChars[i].inv = inventoryByClass[10];
         break;
       case jobs[11]:
@@ -297,7 +297,7 @@ function assignBackgroundHealth() {
         allChars[i].background = backgrounds[5];
         allChars[i].ablPros.push(proficiencies[15], proficiencies[23]);
         allChars[i].hitdie = 'd6';
-        allChars[i].hp = 6 + allChars[i].ablMods[2];
+        allChars[i].hp = 6;
         allChars[i].inv = inventoryByClass[11];
         break;
     }
@@ -436,6 +436,8 @@ function calcAblMods() {
     for (var e = 0; e < allChars[i].ablScores.length; e++) {
       allChars[i].ablMods[e] = Math.floor((allChars[i].ablScores[e] - 10)/2);
     }
+    allChars[i].initiative = allChars[i].ablMods[2];
+    allChars[i].armClass += allChars[i].ablMods[1];
   }
 }
 
@@ -481,6 +483,7 @@ function calcProMods() {
       allChars[i].proMods[4] += 2;
       allChars[i].proMods[5] += 2;
     }
+    allChars[i].perception += allChars[i].proMods[17];
   }
 }
 
