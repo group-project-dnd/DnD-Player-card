@@ -175,3 +175,13 @@ main>div {
   position: relative;
   bottom: -40px;
 }
+#logo{
+  position: absolute;
+  top: 30px;
+  margin: 0 auto;
+  padding: 0px;
+  height: 1100px;
+  width: 850px;
+  opacity: 0.1;
+  filter: grayscale();
+} 
