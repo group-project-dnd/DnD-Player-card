@@ -148,10 +148,12 @@ main>div {
   float: left;
   width: 50px;
   border-bottom-right-radius: 10px;
+  text-align: center; 
 }
 
 #statblock ul li div p {
   height: 30px;
+  font-size: 30px;
 }
 
 #statblock ul li div p:first-child{
@@ -171,7 +173,6 @@ main>div {
   height: 10px;
   width: 20px;
   text-decoration: underline;
-  
 }
 
 #statblock>h2:last-child {
@@ -274,6 +275,32 @@ main>div {
 }
 
 #curntHP{
-  border: 2px inset  black;
-  border-radius: 10px
+  border: 2px inset black;
+  border-radius: 10px;
+  margin: 15px;
+}
+#curntHP p{
+  margin: 5px;
+  font-size: 40px;
+  margin-left: 15px;
+} 
+#tempHP{
+  border: 2px inset black;
+  border-radius: 10px;
+  margin: 15px;
+}
+#hitDice{
+  border: 2px inset black;
+  border-radius: 10px;
+  margin: 15px;
+}
+#hitDice p{
+  font-size: 20px;  
+  margin-top: 5px;
+}
+#deathSaves{
+  border: 2px inset black;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 5px;
 }
