@@ -241,13 +241,22 @@ main>div {
   font-weight: bold;
 }
 #proLang ul{
-  height:183px;
+  height:180px;
+  padding-left: 15px;
+  padding-top:5px;
+  padding-right: 15px;
 }
 #eqpmtCharNotes ul{
-  height:183px;
+  height:180px;
+  padding-left: 15px;
+  padding-top:5px;
+  padding-right: 15px;
 }
 #features ul{
-  height: 409px;
+  height: 406px;
+  padding-left:15px;
+  padding-top:5px;
+  padding-right: 15px;
 }
 #deathSaves span{
   display: inline-block;
