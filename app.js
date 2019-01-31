@@ -163,12 +163,11 @@ var spellWizard = 'Color Spray, Detect Magic, Find Familiar, Mage Armor, Magic M
 //----------------FUNCTION DECLARATIONS----------------
 
 function Character(name, race, subrace, job) {
-  this.username = retrievedUser
+  this.userName = retrievedUser
   this.name = name;
   this.job = job;
   this.level = 1;
   this.background = '';
-  this.userName = '';
   this.race = race;
   this.subrace = subrace;
   this.alignment = 'Neutral'; //STRETCH GOAL: make this customizable
@@ -533,6 +532,7 @@ function handleRoleChange(event){
     }
   }
 }
+var characterName = document.getElementById("characterName")
 
 //Submit form and create character: INCOMPLETE
 var button = document.querySelector('button');
@@ -543,9 +543,10 @@ function handleSubmit(){
     charSubRace= choices[2].value;
   }
   console.log(choices[2]);
-  new Character('stand-in username', choices[0].value, charSubRace , choices[1].value);
+  new Character(characterName.value, choices[0].value, charSubRace , choices[1].value);
   console.log(allChars);
 }
+
 
 //----------------FUNCTION INVOCATIONS----------------
 
@@ -561,7 +562,7 @@ calcProMods();
 assignBackgroundHealth();
 assignMisc();
 
-console.log(allChars);
+console.table(allChars);
 
 //hides subraces on page load
 var subraceEl = document.querySelectorAll("#subraces .sub");
