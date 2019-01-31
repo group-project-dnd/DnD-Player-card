@@ -12,9 +12,11 @@ function handleSubmit(event){
     var usernameStringified= JSON.stringify(username)
     localStorage.username = usernameStringified;
   } else {
-    proceed.href='index.html';
-    console.log('you cannot proceed');
+    anchor.href='index.html';
+    player.placeholder = 'Enter a name to Proceed';
+    event.preventDefault();
   }
 }
 
 submit.addEventListener('click',handleSubmit);
+submit.addEventListener('submit',handleSubmit);
