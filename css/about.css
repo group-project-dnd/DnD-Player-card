@@ -21,7 +21,7 @@ header img{
 ul li img{
     border: 3px groove rgb(168, 89, 15);
     border-radius: 180px;
-    width:200px;
+    width: 150px;
     position: absolute;
     transform: rotate(90deg);
     margin: 70px 50px 50px 50px;
