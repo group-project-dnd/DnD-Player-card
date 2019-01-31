@@ -1,4 +1,44 @@
-li img{
+body{
+    background-image: url("../images/Frontpageimg.jpg");  
+    background-size: 50%;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    background-color: black;
+    filter: brightness(100%);
+}
+nav ul li{
+    color: whitesmoke;
+    text-align: center;
+    font-family: "MedievalSharp";
+    display: block;
+}
+header img{
+    width: 70px;
+    display: block;
+    margin: 0 auto;
+}
+
+ul li img{
     width:150px;
     position:absolute;
+    transform: rotate(90deg);
+    margin: 20px;
+}
+h2{
+    margin: 20px 0;
+    color: whitesmoke;
+    text-align: center;
+    font-family: "MedievalSharp";
+    font-size: 60px;
+    text-shadow: 2px -2px black;
+}
+p{
+    border: 2px dashed green;
+    color:whitesmoke;
+    margin: 20px 0;
+}
+
+footer{
+    background-color: red;
+    color: white;
 }
