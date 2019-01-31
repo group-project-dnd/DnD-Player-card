@@ -185,7 +185,7 @@ function Character(name, race, subrace, job) {
   this.ablMods = [0, 0, 0, 0, 0, 0];
   this.ablPros = [];
   this.proMods = [];
-  this.perception = (10 + this.proMods[17]); //plus perception modifier
+  this.perception = (10 + this.proMods[17]); //these don't exist yet!!!
   this.armClass = (10 + this.ablMods[1]);
   this.initiative = this.ablMods[1];
   this.speed = 0;
