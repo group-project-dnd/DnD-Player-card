@@ -185,3 +185,40 @@ main>div {
   opacity: 0.1;
   filter: grayscale();
 } 
+#atkSpell table{ 
+  margin: 5px;
+  background-color: white;
+  border: solid 5px;
+  border-right: 1px;
+  border-left: 1px;
+  border-radius: 5px;
+  padding: 15px 10px;
+  width: 250px;
+}
+#atkSpell th{
+  height: 16px;
+}
+#atkSpell td{
+  height: 16px;
+  width: ;
+  border: 1px solid black; 
+}
+#atkSpell tr td:first-child{
+  width: 80px;
+}
+#atkSpell ul{
+  height: 250px;
+  width: 250px;
+  border: 2px inset silver;
+  background-color: white;
+}
+#atkSpell li{
+  border-bottom: 1px solid silver;
+}
+#atkSpell li:last-child{
+  border: none;
+}
+#atkSpell h5{
+  font-weight: bold;
+  border-bottom: 1px solid silver
+}
