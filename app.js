@@ -208,7 +208,7 @@ function assignBackgroundHealth() {
         allChars[i].ablPros.push(proficiencies[0], proficiencies[6], proficiencies[14], proficiencies[11]);
         allChars[i].background = backgrounds[8];
         allChars[i].ablPros.push(proficiencies[1], proficiencies[18]);
-        allChars[i].hitdie = 'd12';
+        allChars[i].hitdie = '1d12';
         allChars[i].hp = 12;
         allChars[i].inv = inventoryByClass[0];
         allChars[i].armClass = 10;
@@ -217,7 +217,7 @@ function assignBackgroundHealth() {
         allChars[i].ablPros.push(proficiencies[2], proficiencies[19], proficiencies[23], proficiencies[9], proficiencies[20]);
         allChars[i].background = backgrounds[3];
         allChars[i].ablPros.push(proficiencies[3], proficiencies[22]);
-        allChars[i].hitdie = 'd8';
+        allChars[i].hitdie = '1d8';
         allChars[i].hp = 8;
         allChars[i].inv = inventoryByClass[1];
         allChars[i].armClass = 11;
@@ -226,7 +226,7 @@ function assignBackgroundHealth() {
         allChars[i].ablPros.push(proficiencies[13], proficiencies[19], proficiencies[16], proficiencies[23]);
         allChars[i].background = backgrounds[0];
         allChars[i].ablPros.push(proficiencies[15], proficiencies[12]);
-        allChars[i].hitdie = 'd8';
+        allChars[i].hitdie = '1d8';
         allChars[i].hp = 8;
         allChars[i].inv = inventoryByClass[2];
         allChars[i].armClass = 16;
@@ -235,7 +235,7 @@ function assignBackgroundHealth() {
         allChars[i].ablPros.push(proficiencies[7], proficiencies[13], proficiencies[14], proficiencies[11]);
         allChars[i].background = backgrounds[6];
         allChars[i].ablPros.push(proficiencies[16], proficiencies[12]);
-        allChars[i].hitdie = 'd8';
+        allChars[i].hitdie = '1d8';
         allChars[i].hp = 8;
         allChars[i].inv = inventoryByClass[3];
         allChars[i].armClass = 13;
@@ -244,7 +244,7 @@ function assignBackgroundHealth() {
         allChars[i].ablPros.push(proficiencies[0], proficiencies[6], proficiencies[15], proficiencies[18]);
         allChars[i].background = backgrounds[11];
         allChars[i].ablPros.push(proficiencies[1], proficiencies[21]);
-        allChars[i].hitdie = 'd10';
+        allChars[i].hitdie = '1d10';
         allChars[i].hp = 10;
         allChars[i].inv = inventoryByClass[4];
         allChars[i].armClass = 18;
@@ -253,7 +253,7 @@ function assignBackgroundHealth() {
         allChars[i].ablPros.push(proficiencies[0], proficiencies[2], proficiencies[3], proficiencies[5]);
         allChars[i].background = backgrounds[0];
         allChars[i].ablPros.push(proficiencies[15], proficiencies[12]);
-        allChars[i].hitdie = 'd8';
+        allChars[i].hitdie = '1d8';
         allChars[i].hp = 8;
         allChars[i].inv = inventoryByClass[5];
         allChars[i].armClass = 10;
@@ -262,7 +262,7 @@ function assignBackgroundHealth() {
         allChars[i].ablPros.push(proficiencies[13], proficiencies[19], proficiencies[1], proficiencies[12]);
         allChars[i].background = backgrounds[4];
         allChars[i].ablPros.push(proficiencies[14], proficiencies[18]);
-        allChars[i].hitdie = 'd10';
+        allChars[i].hitdie = '1d10';
         allChars[i].hp = 10;
         allChars[i].inv = inventoryByClass[6];
         allChars[i].armClass = 18;
@@ -271,7 +271,7 @@ function assignBackgroundHealth() {
         allChars[i].ablPros.push(proficiencies[0], proficiencies[6], proficiencies[14], proficiencies[11], proficiencies[5]);
         allChars[i].background = backgrounds[8];
         allChars[i].ablPros.push(proficiencies[1], proficiencies[18]);
-        allChars[i].hitdie = 'd10';
+        allChars[i].hitdie = '1d10';
         allChars[i].hp = 10;
         allChars[i].inv = inventoryByClass[7];
         allChars[i].armClass = 16;
@@ -280,7 +280,7 @@ function assignBackgroundHealth() {
         allChars[i].ablPros.push(proficiencies[2], proficiencies[7], proficiencies[4], proficiencies[3], proficiencies[23], proficiencies[22]);
         allChars[i].background = backgrounds[2];
         allChars[i].ablPros.push(proficiencies[20], proficiencies[5]);
-        allChars[i].hitdie = 'd8';
+        allChars[i].hitdie = '1d8';
         allChars[i].hp = 8;
         allChars[i].inv = inventoryByClass[8];
         allChars[i].armClass = 11;
@@ -289,7 +289,7 @@ function assignBackgroundHealth() {
         allChars[i].ablPros.push(proficiencies[19], proficiencies[6], proficiencies[15], proficiencies[12]);
         allChars[i].background = backgrounds[9];
         allChars[i].ablPros.push(proficiencies[8], proficiencies[9]);
-        allChars[i].hitdie = 'd6';
+        allChars[i].hitdie = '1d6';
         allChars[i].hp = 6;
         allChars[i].inv = inventoryByClass[9];
         allChars[i].armClass = 13;
@@ -298,7 +298,7 @@ function assignBackgroundHealth() {
         allChars[i].ablPros.push(proficiencies[13], proficiencies[19], proficiencies[21], proficiencies[8]);
         allChars[i].background = backgrounds[1];
         allChars[i].ablPros.push(proficiencies[20], proficiencies[4]);
-        allChars[i].hitdie = 'd8';
+        allChars[i].hitdie = '1d8';
         allChars[i].hp = 8;
         allChars[i].inv = inventoryByClass[10];
         allChars[i].armClass = 11;
@@ -307,7 +307,7 @@ function assignBackgroundHealth() {
         allChars[i].ablPros.push(proficiencies[7], proficiencies[13], proficiencies[9], proficiencies[8]);
         allChars[i].background = backgrounds[5];
         allChars[i].ablPros.push(proficiencies[15], proficiencies[23]);
-        allChars[i].hitdie = 'd6';
+        allChars[i].hitdie = '1d6';
         allChars[i].hp = 6;
         allChars[i].inv = inventoryByClass[11];
         allChars[i].armClass = 10;
