@@ -542,9 +542,8 @@ function handleSubmit(){
   if (choices[2]){
     charSubRace= choices[2].value;
   }
-  console.log(choices[2]);
   new Character(characterName.value, choices[0].value, charSubRace , choices[1].value);
-  console.log(allChars);
+  localStorage.newChar = JSON.stringify(allChars);
 }
 
 
