@@ -149,8 +149,9 @@ var cantTiefling = 'Thaumatergy'
 
 var cantHighElf = 'Minor Illusion'
 var cantForestGnome = 'Minor Illusion'
+//Speed by Race
 
-//Class Cantrips
+ //Class Cantrips
 
 var cantBard = 'Vicious Mockery, Mending';
 var cantCleric = 'Sacred Flame, Spare the Dying, Guidance';
