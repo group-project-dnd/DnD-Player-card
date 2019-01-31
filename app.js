@@ -1,4 +1,9 @@
 'use strict';
+
+  var retrievedUser=JSON.parse(localStorage.username);
+  console.log(retrievedUser);
+
+
 //----------------DATA----------------
 
 // var username = prompt('what is your name?');
@@ -158,11 +163,11 @@ var spellWizard = 'Color Spray, Detect Magic, Find Familiar, Mage Armor, Magic M
 //----------------FUNCTION DECLARATIONS----------------
 
 function Character(name, race, subrace, job) {
+  this.userName = retrievedUser
   this.name = name;
   this.job = job;
   this.level = 1;
   this.background = '';
-  this.userName = '';
   this.race = race;
   this.subrace = subrace;
   this.alignment = 'Neutral'; //STRETCH GOAL: make this customizable
@@ -499,7 +504,11 @@ function assignMisc() {
 
 //Shows the corresponding descriptions of races and roles
 var race = document.getElementById('race');
+var subRaceSelection = document.getElementsByName('subrace')
 function handleRaceChange(event){
+  for (var i = 0; i<subRaceSelection.length; i++){
+     subRaceSelection[i].checked= false;
+   }
   for (var i = 0; i < races.length; i++) {
     if (event.target.value === races[i].toLowerCase()) {
       for (var i = 0; i < subraceEl.length; i++) {
@@ -523,33 +532,41 @@ function handleRoleChange(event){
     }
   }
 }
+var characterName = document.getElementById("characterName")
 
 //Submit form and create character: INCOMPLETE
 var button = document.querySelector('button');
 function handleSubmit(){
   var choices = document.querySelectorAll('input:checked');
-  console.log(choices[0].value, choices[1].value);
-  new Character('stand-in username', choices[0].value, 'stand-in subrace', choices[1].value);
-  console.log(allChars);
+  var charSubRace = ' '
+  if (choices[2]){
+    charSubRace= choices[2].value;
+  }
+  new Character(characterName.value, choices[0].value, charSubRace , choices[1].value);
+  localStorage.newChar = JSON.stringify(allChars);
 }
+
 
 //----------------FUNCTION INVOCATIONS----------------
 
-new Character('Harry', 'Tiefling', '', 'Wizard');
-new Character('Aaron', 'Half-Orc', '', 'Fighter');
-new Character('Leo', 'Dragonborn', 'White', 'Rogue');
-new Character('Elizabeth', 'Elf', 'Dark Elf (Drow)', 'Cleric');
+// new Character('Harry', 'Tiefling', '', 'Wizard');
+// new Character('Aaron', 'Half-Orc', '', 'Fighter');
+// new Character('Leo', 'Dragonborn', 'White', 'Rogue');
+// new Character('Elizabeth', 'Elf', 'Dark Elf (Drow)', 'Cleric');
+
+
 assignAblScores();
 calcAblMods();
 calcProMods();
 assignBackgroundHealth();
 assignMisc();
 
-console.log(allChars);
+console.table(allChars);
 
 //hides subraces on page load
 var subraceEl = document.querySelectorAll("#subraces .sub");
 var subjobEl = document.querySelectorAll("#subjobs .sub")
+
 
 for (var i = 0; i < subraceEl.length; i++) {
   subraceEl[i].style.display = "none";
@@ -561,3 +578,4 @@ for (var i = 0; i < subjobEl.length; i++) {
 race.addEventListener("click", handleRaceChange);
 role.addEventListener("click", handleRoleChange);
 button.addEventListener("click", handleSubmit);
+
