@@ -36,6 +36,8 @@ a {
   text-shadow: -1px -1px rgb(70, 0, 0);
   font-weight: bold;
   text-decoration: none;
+  position: relative;
+  z-index: 5;
 }
 header img {
   float:left;
@@ -146,10 +148,12 @@ main>div {
   float: left;
   width: 50px;
   border-bottom-right-radius: 10px;
+  text-align: center; 
 }
 
 #statblock ul li div p {
   height: 30px;
+  font-size: 30px;
 }
 
 #statblock ul li div p:first-child{
@@ -167,7 +171,7 @@ main>div {
 #statblock ul li ul li h2 span {
   display: inline-block;
   height: 10px;
-  width: 10px;
+  width: 20px;
   text-decoration: underline;
 }
 
@@ -184,4 +188,119 @@ main>div {
   width: 850px;
   opacity: 0.1;
   filter: grayscale();
+  z-index: 1;
 } 
+#atkSpell table{ 
+  margin: 5px;
+  background-color: white;
+  border: solid 5px;
+  border-right: 1px;
+  border-left: 1px;
+  border-radius: 5px;
+  padding: 15px 10px;
+  width: 248px;
+  
+}
+#atkSpell th{
+  height: 16px;
+}
+#atkSpell td{
+  height: 16px;
+  border: 1px solid black; 
+}
+#atkSpell tr td:first-child{
+  width: 80px;
+}
+#atkSpell ul{
+  margin: 5px;
+  height: 250px;
+  width: 248px;
+  border: 2px inset silver;
+  background-color: white;
+}
+#atkSpell li{
+  border-bottom: 1px solid silver;
+}
+#atkSpell li:last-child{
+  border: none;
+}
+#atkSpell h5{
+  font-weight: bold;
+  border-bottom: 1px solid silver
+}
+#health h2{
+  font-weight: bold;
+}
+#proLang h2{
+  font-weight: bold;
+}
+#eqpmtCharNotes h2{
+  font-weight: bold;  
+}
+#features h2{
+  font-weight: bold;
+}
+#proLang ul{
+  height:183px;
+}
+#eqpmtCharNotes ul{
+  height:183px;
+}
+#features ul{
+  height: 409px;
+}
+#deathSaves span{
+  display: inline-block;
+  width: 75px ;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+#armor p, #init p, #speed p {
+  border: 2px solid black;
+  text-align: center;
+  height: 50px;
+  font-size: 45px;
+  border: 1px double black;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-radius: 10px;
+}
+#armor, #init, #speed{
+ display: inline-block;
+  border: 2px solid black;
+ width: 58px;
+ height: 70px;
+ margin-left: 18px;
+ margin-top: 10px;
+}
+
+#curntHP{
+  border: 2px inset black;
+  border-radius: 10px;
+  margin: 15px;
+}
+#curntHP p{
+  margin: 5px;
+  font-size: 40px;
+  margin-left: 15px;
+} 
+#tempHP{
+  border: 2px inset black;
+  border-radius: 10px;
+  margin: 15px;
+}
+#hitDice{
+  border: 2px inset black;
+  border-radius: 10px;
+  margin: 15px;
+}
+#hitDice p{
+  font-size: 20px;  
+  margin-top: 5px;
+}
+#deathSaves{
+  border: 2px inset black;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 5px;
+}
