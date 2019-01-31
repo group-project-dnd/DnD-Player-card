@@ -36,3 +36,29 @@ for (var i = 0; i < chara.ablPros.length; i++) {
   }
 }
 document.getElementById('passive').firstElementChild.innerHTML = chara.perception;
+document.getElementById('armor').firstElementChild.innerHTML= chara.armClass;
+document.getElementById('init').firstElementChild.innerHTML= chara.initiative;
+document.getElementById('curntHP').firstElementChild.innerHTML= chara.hp;
+document.getElementById('hitDice').firstElementChild.innerHTML= chara.hitdie;
+document.getElementById('proLang').firstElementChild.innerHTML= chara.proLang;
+document.getElementById('eqpmtCharNotes').firstElementChild.innerHTML= chara.inv;
+document.getElementById('features').firstElementChild.innerHTML=chara.feat;
+
+var spellList = document.getElementById('atkSpell').lastElementChild;
+var cantEl= document.createElement('h5');
+cantEl.innerHTML="Cantrips";
+spellList.appendChild(cantEl);
+for(var i= 0; i< chara.cants.length; i++){
+  var liEl = document.createElement('li');
+  liEl.innerHTML = chara.cants[i];
+  spellList.appendChild(liEl);
+}
+
+var spellEl= document.createElement('h5');
+spellEl.innerHTML="Lvl 1 Spells";
+spellList.appendChild(spellEl);
+for(var i= 0; i< chara.spells.length; i++){
+  var liEl = document.createElement('li');
+  liEl.innerHTML = chara.spells[i];
+  spellList.appendChild(liEl);
+}
