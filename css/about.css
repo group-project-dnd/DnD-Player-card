@@ -6,16 +6,18 @@ body{
     background-color: black;
     filter: brightness(100%);
 }
-nav ul li{
+/* nav ul li{
     color: whitesmoke;
+    position: absolute;
     text-align: center;
     font-family: "MedievalSharp";
     display: block;
-}
+} */
 header img{
     width: 70px;
     display: block;
     margin: 0 auto;
+    border-radius: 180px;
 }
 
 ul li img{
@@ -26,12 +28,20 @@ ul li img{
     transform: rotate(90deg);
     margin: 70px 50px 50px 50px;
 }
+h1{ color: whitesmoke;
+    text-align: center;
+    font-family: "MedievalSharp";
+    font-size: 60px;
+    text-shadow: 2px -2px black;
+    margin: 0px;
+    padding: 10px;
 
+}
 h2{
     color: whitesmoke;
     text-align: center;
     font-family: "MedievalSharp";
-    font-size: 60px;
+    font-size: 40px;
     text-shadow: 2px -2px black;
     margin: 0px;
     padding: 10px;
@@ -42,7 +52,9 @@ p{
     background-color:rgb(204, 199, 199);
     opacity: 0.73;
     margin: 10px 250px;
-    padding: 10px 20px;
+    padding: 20px 50px;
+    line-height: 20px;
+    font-size: 20px;
 
 }
 
