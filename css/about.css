@@ -6,16 +6,12 @@ body{
     background-color: black;
     filter: brightness(100%);
 }
-nav ul li{
-    color: whitesmoke;
-    text-align: center;
-    font-family: "MedievalSharp";
-    display: block;
-}
+
 header img{
     width: 70px;
     display: block;
     margin: 0 auto;
+    border-radius: 180px;
 }
 
 ul li img{
@@ -27,8 +23,7 @@ ul li img{
     margin: 70px 50px 50px 50px;
 }
 
-h2{
-    color: whitesmoke;
+h1{ color: whitesmoke;
     text-align: center;
     font-family: "MedievalSharp";
     font-size: 60px;
@@ -36,14 +31,26 @@ h2{
     margin: 0px;
     padding: 10px;
 }
+
+h2{
+    color: whitesmoke;
+    text-align: center;
+    font-family: "MedievalSharp";
+    font-size: 40px;
+    text-shadow: 2px -2px black;
+    margin: 0px;
+    padding: 10px;
+}
+
 p{
-    border:4px groove burlywood;
+    border:5px groove burlywood;
     color:black;
     background-color:rgb(204, 199, 199);
     opacity: 0.73;
     margin: 10px 250px;
-    padding: 10px 20px;
-
+    padding: 20px 50px;
+    line-height: 20px;
+    font-size: 20px;
 }
 
 footer{
@@ -52,9 +59,11 @@ footer{
     margin-top: 50px;
     padding: 15px;
 }
+
 footer h2{
     font-size: 30px;
 }
+
 a{
     text-decoration: none;
 }
