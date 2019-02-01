@@ -326,3 +326,7 @@ main>div {
   margin-left: 8px;
   margin-right: 8px;  
 }
+#job p, #background p, #username p, #race p, #alignment p, #exp p{
+  margin-left: 8px;
+  margin-right: 8px;
+}
