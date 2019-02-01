@@ -35,7 +35,8 @@ var ablPros = document.querySelectorAll('li li h2');
 for (var i = 0; i < chara.ablPros.length; i++) {
   for (var e = 0; e < ablPros.length; e++) {
     if (ablPros[e].textContent.slice(3) === chara.ablPros[i]) {
-      ablPros[e].style.fontWeight = "bold";
+      ablPros[e].style.fontWeight = "bolder";
+      ablPros[e].style.backgroundColor = "white";
     }
   }
 }
