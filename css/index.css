@@ -67,3 +67,11 @@ footer h4{
   font-size: 30px;
   text-align: center;
 }
+[type=button] {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+#load {
+  display: none;
+}
