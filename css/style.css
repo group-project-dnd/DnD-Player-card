@@ -10,6 +10,9 @@ font-family: sans-serif;
 /* color: #ff0000; */
 }
 
+label {
+  cursor: pointer;
+}
 content>section {
   border: 2px solid black;
   padding-top: 10px;
@@ -62,7 +65,7 @@ aside{
 aside p:first-of-type {
   margin: 0px 10px;
   padding: 15px;
-  border-bottom: dotted 3px grey;
+  border-bottom: solid 3px grey;
 }
 h4 {
   font-size: 20px;
@@ -93,9 +96,9 @@ button{
 }
 
 #characterName {
-  border-top: solid black;
-  height: 45px;
-  font-size: 30px;
+  border: inset silver;
+  height: 30px;
+  font-size: 20px;
   padding-top: 5px;
 }
 
@@ -104,3 +107,14 @@ button{
   font-size: 30px;
 }
 
+aside p, aside li {
+  margin: 25px;
+  text-indent: -10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid silver;
+}
+aside li {
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+}
